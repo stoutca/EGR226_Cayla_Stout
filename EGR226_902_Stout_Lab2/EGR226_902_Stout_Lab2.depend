@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1611798476 source:w:\egr226_902\egr226_cayla_stout\egr226_902_stout_lab2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<math.h>
+
