@@ -11,7 +11,7 @@ typedef struct{
 }book;
 
 //custom function prototypes
-void parse_file(char, char);
+int parse_file(char, char);
 void print_book(book);
 void search_title(char, int, char);
 void search_author(char, int, char);
@@ -21,12 +21,63 @@ int main()
 {
     //array of book-structures
     book book_array[360];
+    int acceptable_input = 1; //flag for user input
+    int userChoice; //variable to hold user choice for searching through book database
+    int applicationOn = 1; //flag to let program loop through book database endlessly inside of while loop
+    int numBooks; //int variable to store the number of books from the file
+
+    char filename[] = "BookList.txt";
+
+    char Title[225]; //string for user input titles
+    char author[50]; //string for user input authors
+    char ISBNnum[50]; //string for user input of ISBN numbers
 
     //call parse_file() and send the filename and array of book structures
-    parse_file(char filename, book_array);
+    parse_file(filename, book_array);
+    for(int numBooks = 0; book_array[numBooks] != NULL; numBooks++); //loop through array and get the number of books
+
+    while(applicationOn == 1)
+    {
 
     //prompt user to search for books by title, author, or ISBN
     printf("What would you like to search by? Enter [0] for Title, [1] for Author, or [2] for ISBN: ");
+     do //do-while loop to check for user input
+        {
+            scanf("%c",&userChoice); //read in the user choice and check if it is acceptable
+            getchar(); //wait for user input
+            if((isdigit(userChoice)) && ((userChoice == 0) || (userChoice == '1') || (userChoice == '2'))) //if the input is a digit and is 1 or 2
+            {
+                acceptable_input = 1;
+            }
+            else
+            {
+                acceptable_input = 0;
+                printf("\nPlease enter a 0, 1, or 2 to search the book database: ");
+            }
+        }while(acceptable_input == 0);
+
+
+        if(userChoice == 0) //if the user chose to search by title
+        {
+            do
+            {
+                printf("\nPlease enter a title or key words to search the book titles by: ");
+                fgets(Title, 225, stdin); //read in all of user input
+                search_title(book_array, numBooks, Title); //call function to search the book database using the user title
+            }
+
+        }
+
+        else if(userChoice == 1) //if the user chose to search by author
+        {
+
+        }
+
+        else if(userChoice == 2) //if the user chose to search by ISBN number
+        {
+
+        }
+    }
 
     return 0;
 }
