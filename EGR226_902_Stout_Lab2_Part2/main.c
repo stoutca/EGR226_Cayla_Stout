@@ -34,7 +34,7 @@ int main()
 
     //call parse_file() and send the filename and array of book structures
     parse_file(filename, book_array);
-    for(int numBooks = 0; book_array[numBooks] != NULL; numBooks++); //loop through array and get the number of books
+    for(int numBooks = 0; book_array[numBooks].title != NULL; numBooks++); //loop through array and get the number of books
 
     while(applicationOn == 1)
     {
@@ -59,23 +59,23 @@ int main()
 
         if(userChoice == 0) //if the user chose to search by title
         {
-            do
-            {
-                printf("\nPlease enter a title or key words to search the book titles by: ");
-                fgets(Title, 225, stdin); //read in all of user input
-                search_title(book_array, numBooks, Title); //call function to search the book database using the user title
-            }
-
+            printf("\nPlease enter a title or key words to search the book titles by: ");
+            fgets(Title, 225, stdin); //read in all of user input
+            search_title(book_array, numBooks, Title); //call function to search the book database using the user title
         }
 
         else if(userChoice == 1) //if the user chose to search by author
         {
-
+            printf("\nPlease enter an author name or letters of a name to search the books by: "); //prompt user to enter an author's name or letters to a name
+            fgets(author, 50, stdin); //get user input from console
+            search_author(book_array, numBooks, author); //call function to search the data base by the author
         }
 
         else if(userChoice == 2) //if the user chose to search by ISBN number
         {
-
+            printf("\nPlease enter an ISBN number to search the books by: ");
+            fgets(ISBNnum, 50, stdin);
+            search_ISBN(book_array, numBooks, ISBNnum);
         }
     }
 
@@ -129,4 +129,73 @@ int parse_file(char filename[], book book_array[]) {
  }
 
  return 1;
+}
+
+/*-----------------------------------------------------------
+* Function: print_book
+* Description: Sift through a file of books to populate
+* an empty book array
+* Inputs:
+* (char*) filename: file to open and parse
+* (book*) book_array: array of book structures to
+* populate
+* Outputs:
+* (int) parse status, 1 if successful, 0 otherwise.
+*---------------------------------------------------------*/
+
+void print_book(book)
+{
+
+
+}
+
+/*-----------------------------------------------------------
+* Function: search_title
+* Description: Sift through a file of books to populate
+* an empty book array
+* Inputs:
+* (char*) filename: file to open and parse
+* (book*) book_array: array of book structures to
+* populate
+* Outputs:
+* (int) parse status, 1 if successful, 0 otherwise.
+*---------------------------------------------------------*/
+
+void search_title(char, int, char)
+{
+
+}
+
+/*-----------------------------------------------------------
+* Function: search_author
+* Description: Sift through a file of books to populate
+* an empty book array
+* Inputs:
+* (char*) filename: file to open and parse
+* (book*) book_array: array of book structures to
+* populate
+* Outputs:
+* (int) parse status, 1 if successful, 0 otherwise.
+*---------------------------------------------------------*/
+
+void search_author(char, int, char)
+{
+
+}
+
+/*-----------------------------------------------------------
+* Function: search_ISBN
+* Description: Sift through a file of books to populate
+* an empty book array
+* Inputs:
+* (char*) filename: file to open and parse
+* (book*) book_array: array of book structures to
+* populate
+* Outputs:
+* (int) parse status, 1 if successful, 0 otherwise.
+*---------------------------------------------------------*/
+
+void search_ISBN(char, int, char)
+{
+
 }
