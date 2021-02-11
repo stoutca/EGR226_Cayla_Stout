@@ -1,0 +1,35 @@
+#include "msp.h"
+void main(void)
+{
+    WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD; // stop watchdog timer
+    while(1)
+    {
+        if( DebouncePress())
+            P1OUT ^= BIT0; //Toggle P1 LED
+    }
+
+}
+
+int DebouncePress(void)
+{
+    int pin_Value = 0; //initialize variable as low
+    if ((P1IN & 0x02) == 0x00) //check of button pushed
+    {
+        __delay_cycles(30000); //pause for 10 m-sec for switch bounce
+        if ((P1IN & 0x02) == 0x00) //check of button is still pushed
+            pin_Value = 1;
+    }
+    return pin_Value; //return 1 if pushed- 0 if not pushed
+}
+
+int DebounceRelease(void)
+{
+    int pin_Value = 0; //initialize variable as low
+    if ((P1IN & 0x02) == 0x02) //check of button pushed
+    {
+        __delay_cycles(30000); //pause for 10 m-sec for switch bounce
+        if ((P1IN & 0x02) == 0x02) //check of button is still pushed
+            pin_Value = 1;
+    }
+    return pin_Value; //return 1 if pushed- 0 if not pushed
+}
