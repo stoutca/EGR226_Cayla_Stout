@@ -1,0 +1,2 @@
+int DebouncePress(void);
+int DebounceRelease(void);

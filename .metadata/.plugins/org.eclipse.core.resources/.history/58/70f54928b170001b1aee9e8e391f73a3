@@ -1,0 +1,2 @@
+void InitializeButtons(void);
+void InitializeLEDs(void);
