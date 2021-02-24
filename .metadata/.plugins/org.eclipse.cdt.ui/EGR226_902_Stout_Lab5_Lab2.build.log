@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab5_Lab2 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'EGR226_902_Stout_Lab5_Lab2.out' is up to date.
+
+**** Build Finished ****

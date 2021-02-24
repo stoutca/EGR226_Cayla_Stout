@@ -3,10 +3,10 @@ Author: Cayla Stout
 Course: EGR 226 - 902
 Date: 2/10/2021
 Project: Lab 4 Part 1 LED flashing program
-Description: This program will cycle through the red, blue,
+Description: This program will cycle through the red, yellow,
 and green LED colors every time the button on P1.1 is
 pressed.
-*************************************************************/
+ *************************************************************/
 
 #include "msp.h"
 
@@ -33,10 +33,10 @@ void main(void)
 
     while(1) //loop for program to run in
     {
-            if(flag == 0) //if it is the first button push
+        if(flag == 0) //if it is the first button push
+        {
+            if(DebouncePress())
             {
-                if(DebouncePress())
-                {
                 while(DebounceRelease() == 1) //run the code while the button is not released. Will leave the loop when the button is released
                 {
                     P2->OUT &= ~BIT1; //set green LED to low
@@ -44,48 +44,48 @@ void main(void)
                     P2->OUT |= BIT0; //Turn P2.0 Red LED on
                     flag = 1; //set flag to 1
                 }
-                }
             }
-            if(flag == 1)
-            {
-                if(DebouncePress())
-                {
-                while(DebounceRelease() == 1) //if the button is released
-                    {
-                        P2->OUT &= ~BIT0; //set red LED to low
-                        P2->OUT &= ~BIT2; //set blue LED to low
-                        P2->OUT |= BIT1; //Turn P2.0 Green LED on
-                        flag = 2; //set flag to 2
-                    }
-                }
-            }
-            if(flag == 2)
-                {
-                    if(DebouncePress())
-                    {
-                    while(DebounceRelease() == 1) //if the button is released
-                        {
-                            P2->OUT &= ~BIT0; //set red LED to low
-                            P2->OUT &= ~BIT1; //set green LED to low
-                            P2->OUT |= BIT2; //Turn P2.0 Red LED on
-                            flag = 0; //set flag to 0 to reset cycle
-                        }
-                    }
-                }
         }
+        if(flag == 1)
+        {
+            if(DebouncePress())
+            {
+                while(DebounceRelease() == 1) //if the button is released
+                {
+                    P2->OUT &= ~BIT0; //set red LED to low
+                    P2->OUT &= ~BIT2; //set blue LED to low
+                    P2->OUT |= BIT1; //Turn P2.0 Green LED on
+                    flag = 2; //set flag to 2
+                }
+            }
+        }
+        if(flag == 2)
+        {
+            if(DebouncePress())
+            {
+                while(DebounceRelease() == 1) //if the button is released
+                {
+                    P2->OUT &= ~BIT0; //set red LED to low
+                    P2->OUT &= ~BIT1; //set green LED to low
+                    P2->OUT |= BIT2; //Turn P2.0 Red LED on
+                    flag = 0; //set flag to 0 to reset cycle
+                }
+            }
+        }
+    }
 
 
 
 }
 
 /****| InitializeLEDs | *************************************
-* Brief: This function initializes the LEDs and their respective
-* ports to outputs.
-* param:
-* N/A
-* return:
-* N/A
-*************************************************************/
+ * Brief: This function initializes the LEDs and their respective
+ * ports to outputs.
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
 
 void InitializeLEDs(void)
 {
@@ -105,14 +105,14 @@ void InitializeLEDs(void)
 }
 
 /****| InitializeButtons | **********************************
-* Brief: This function initializes the button on P1.1 and its
-* respective port to inputs and enables the pull up resistor
-* built into the MSP.
-* param:
-* N/A
-* return:
-* N/A
-*************************************************************/
+ * Brief: This function initializes the button on P1.1 and its
+ * respective port to inputs and enables the pull up resistor
+ * built into the MSP.
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
 
 void InitializeButtons(void)
 {
@@ -126,14 +126,14 @@ void InitializeButtons(void)
 }
 
 /****| DebouncePress | **************************************
-* Brief: This function tests if the button was pressed, and
-* if it was, debounces the press with a delay.
-* param:
-* N/A
-* return:
-* 0 if the button was not pushed, 1 if the button was pushed
-* after being debounced.
-*************************************************************/
+ * Brief: This function tests if the button was pressed, and
+ * if it was, debounces the press with a delay.
+ * param:
+ * N/A
+ * return:
+ * 0 if the button was not pushed, 1 if the button was pushed
+ * after being debounced.
+ *************************************************************/
 
 int DebouncePress(void)
 {
@@ -148,14 +148,14 @@ int DebouncePress(void)
 }
 
 /****| DebounceRelease | ************************************
-* Brief: This function tests if the button was released after
-* being pressed, and if it was, debounces the release with a
-* delay.
-* param:
-* N/A
-* return:
-* 0 if the button was not pushed, 1 if the button was pushed.
-*************************************************************/
+ * Brief: This function tests if the button was released after
+ * being pressed, and if it was, debounces the release with a
+ * delay.
+ * param:
+ * N/A
+ * return:
+ * 0 if the button was not pushed, 1 if the button was pushed.
+ *************************************************************/
 
 int DebounceRelease(void)
 {
