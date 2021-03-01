@@ -1,24 +1,35 @@
-/* This program calls a subroutine that scans a 4x3 matrix keypad
- * and returns a unique number for each key pressed. The character
- * corresponding to the key pressed is printed to the CCS console.
- * Port 4 0,1,2,3 are connected to the rows
- * Port 4 4,5,6 are connected to the columns of the keypad.*/
+/************************************************************
+Author: Cayla Stout
+Course: EGR 226 - 902
+Date: 2/24/2021
+Project: Lab 6 Part 2 Keypad Entry Program
+Description: This program calls a subroutine that scans a 4x3
+matrix keypad and returns a unique number for each key pressed.
+The character corresponding to the key pressed is printed to
+the CCS console. Port 4 0,1,2,3 are connected to the rows
+Port 4 4,5,6 are connected to the columns of the keypad. It then
+scans the numbers entered into an array with a maximum of four
+digits and prints the most recent four numbers to the CCS
+Console when the pound key (#) is pressed on the keypad. If
+less than 4 digits are entered, the program forces the user
+to enter 4 digits before moving on.
+ *************************************************************/
 
 #include "msp.h"
-#include <stdio.h>
+#include <stdio.h> //include this library to use functions like printf()
 
 void keypad_init (void); // prototype for GPIO initialization
 uint8_t Read_Keypad (void); // prototype for keypad scan subroutine
 void Print_Keys(int); // Print Key pressed
-uint8_t num, pressed; //Global variables
+uint8_t num, pressed; //Global variables for storing the number that was pressed on the keypad and whether or not the keypad had been pressed
 
-void SysTick_Init (void);
-void SysTick_delay (uint16_t delay);
+void SysTick_Init (void); //prototype for the keypad initialization function
+void SysTick_delay (uint16_t delay); //prototype for the delay function
 
 
 void main(void)
 {
-    SysTick_Init();
+    SysTick_Init(); //initialize the SysTick timer
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;     // stop watchdog timer
     keypad_init ( ); // Call initialization functions for functionality
 
@@ -37,21 +48,28 @@ void main(void)
 
     while(1)
     {
-        invalidInput = 0;
-        //for getting 4 numbers, use a while loop until the # key is pressed (num would == 12). Then check if there were 4 numbers entered. If more than 4
+
+        //for getting 4 numbers, use a while loop until the # key is pressed (num would == 12). Then check if there were 4 numbers entered
         do
         {
             pressed = Read_Keypad(); // Call Function to read Keypad
-            if (pressed)
+            if (pressed) //if a key is pressed
             {
-                Print_Keys(num);
+                Print_Keys(num); //print the keys to the console
                 if((num != 10) && (count < 4) && (num != 12)) //if the user didn't enter a star or pound sign as number input and the input is less than 4 numbers
-                    numArray[count] = num; //save the value of num into the array
+                {
+                    if(num != 11) //if zero is not pressed
+                        numArray[count] = num; //save the value of num into the array
+                    else if(num == 11) //if zero is pressed
+                        numArray[count] = 0; //save the value of zero into the array instead of 11
+                }
                 if((num != 12) && (num != 10)) //if the pound sign wasn't entered yet and the num is not a star
                     count++; //increment count
-                if((count > 3) && (num != 12))//if count becomes higher than 3, meaning the user is entering more than 4 numbers, and the pound sign hasn't been entered
+                if(count >= 4)//if count becomes higher than 4, meaning the user is entering more than 4 numbers
                 {
-                    if(num != 10) //if the user is not attempting to enter a star
+                    if(num == 11)//if zero was pressed
+                        num = 0; //set the value of num to actually be zero
+                    if((num != 10)&&(num !=12)&&(count > 4)) //if the user is not attempting to enter a star or include pound in the array and the actual number of digits entered is greater than 4, not equal to 4
                     {
                         tempNum1 = numArray[1]; //save the array values into temporary variables
                         tempNum2 = numArray[2];
@@ -61,8 +79,16 @@ void main(void)
                         numArray[1] = tempNum2;  //save the third most recent number to the numArray[1] spot
                         numArray[0] = tempNum1; //save the fourth most recent number to the numArray[0] spot
                     }
+                    else if(num == 12) //if the pound key was entered
+                    {
+                        throughFlag = 1; //set the throughFlag to let the program know the cycle has been completed and the validity of the input needs to be checked
+                        invalidInput = 0; //reset the validity flag to zero so input is valid again. This will be checked before printing the input
+                    }
 
                 }
+                //if the user entered the pound sign and the number of digits was still less than 4
+                else if((count < 4) && (num == 12))
+                    invalidInput = 1; //mark the input as invalid by setting the flag to 1
             }
             SysTick_delay(10); // 10ms delay through the loop before reading keypad again
         }
@@ -70,17 +96,20 @@ void main(void)
 
 
         //if the user entered less than 4 numbers
-        if((count < 4) && (throughFlag == 1))
+        if(invalidInput == 1)
         {
             printf("Please enter 4 digits for the pin: \n");
-            invalidInput = 1;
+            throughFlag = 0; //since the user has entered bad input, the program is technically not finished cycling through
+            num = 0; //reset the value of num to keep the program checking for input in the do-while() loop
         }
 
-        //if the input is still good, print the pin to the user
-        if(invalidInput == 0)
+        //if the input is still good and the program has completed its cycle, print the pin to the user
+        if((invalidInput == 0) && (throughFlag == 1))
         {
             printf("The pin entered was: [%d], [%d], [%d], [%d]\n", numArray[0], numArray[1], numArray[2], numArray[3]);
-            count = 0;
+            count = 0; //reset the count so the program can start over
+            throughFlag = 0; //reset the program so it knows to go back to the do-while() loop
+            printf("Please enter 4 digits for the pin: \n"); //prompt the user again to enter more digits
         }
 
     }
@@ -120,6 +149,16 @@ void SysTick_delay (uint16_t delay)
     while((SysTick->CTRL & BIT(16)) == 0); // wait for flag to be SET
 }
 
+/****| keypad_init | *****************************************
+ * Brief: This function intitializes the keypad.  Port 4 0,1,2,3 are
+ * connected to the rows, Port 4 4,5,6 are connected to the columns
+ * of the keypad.
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
+
 void keypad_init (void)
 {
     //Rows of keypad-------------------------------------------------
@@ -158,10 +197,18 @@ void keypad_init (void)
 
     P4->SEL0 &= ~BIT6;
     P4->SEL1 &= ~BIT6; //set P4.6 as GPIO
-
-
-
 }
+
+/****| Print_keys() | *****************************************
+* Brief: This function prints the keys that the user inputs
+* into the keypad.
+* param:
+* GLOBAL integer variable called "num" that stores the value
+* of the number input in the Read_Keypad() function
+* return:
+* N/A
+*************************************************************/
+
 void Print_Keys(num)
 {
     //if num is a special character, then the number for the special character must be identified and num corrected to the character
@@ -175,6 +222,16 @@ void Print_Keys(num)
     if((num != 10) && (num != 12)) //if the num value is not a special character, print the number
         printf("[%d]\n", num);
 }
+
+/****| Read_Keypad() | *****************************************
+* Brief: scans a 4x3 matrix keypad and returns a unique number
+* for each key pressed. The character corresponding to the key
+* pressed is printed to the CCS console.
+* param:
+* N/A
+* return:
+* 1 if the keypad was pressed, 0 if the keypad was not pressed
+***************************************************************/
 
 uint8_t Read_Keypad(void)
 {

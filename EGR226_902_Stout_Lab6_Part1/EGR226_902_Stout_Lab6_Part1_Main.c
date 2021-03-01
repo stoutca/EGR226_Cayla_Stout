@@ -1,11 +1,17 @@
-/* This program calls a subroutine that scans a 4x3 matrix keypad
- * and returns a unique number for each key pressed. The character
- * corresponding to the key pressed is printed to the CCS console.
- * Port 4 0,1,2,3 are connected to the rows
- * Port 4 4,5,6 are connected to the columns of the keypad.*/
+/************************************************************
+Author: Cayla Stout
+Course: EGR 226 - 902
+Date: 2/24/2021
+Project: Lab 6 Part 1 Keypad Entry Program
+Description: This program calls a subroutine that scans a 4x3
+matrix keypad and returns a unique number for each key pressed.
+The character corresponding to the key pressed is printed to
+the CCS console. Port 4 0,1,2,3 are connected to the rows
+Port 4 4,5,6 are connected to the columns of the keypad
+ *************************************************************/
 
 #include "msp.h"
-#include <stdio.h>
+#include <stdio.h> //include this library to use functions like printf()
 
 void keypad_init (void); // prototype for GPIO initialization
 uint8_t Read_Keypad (void); // prototype for keypad scan subroutine
@@ -25,8 +31,8 @@ void main(void)
     while (1)
     {
         pressed = Read_Keypad(); // Call Function to read Keypad
-        if (pressed)
-            Print_Keys(num);
+        if (pressed) //if the keypad was pressed
+            Print_Keys(num); //print the pressed numbers to the screen
         SysTick_delay(10); // 10ms delay through the loop before reading keypad again
     }
 
@@ -66,6 +72,16 @@ void SysTick_delay (uint16_t delay)
     while((SysTick->CTRL & BIT(16)) == 0); // wait for flag to be SET
 }
 
+/****| keypad_init | *****************************************
+ * Brief: This function intitializes the keypad.  Port 4 0,1,2,3 are
+ * connected to the rows, Port 4 4,5,6 are connected to the columns
+ * of the keypad.
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
+
 void keypad_init (void)
 {
     //Rows of keypad-------------------------------------------------
@@ -104,10 +120,18 @@ void keypad_init (void)
 
     P4->SEL0 &= ~BIT6;
     P4->SEL1 &= ~BIT6; //set P4.6 as GPIO
-
-
-
 }
+
+/****| Print_keys() | *****************************************
+* Brief: This function prints the keys that the user inputs
+* into the keypad.
+* param:
+* GLOBAL integer variable called "num" that stores the value
+* of the number input in the Read_Keypad() function
+* return:
+* N/A
+*************************************************************/
+
 void Print_Keys(num)
 {
     //if num is a special character, then the number for the special character must be identified and num corrected to the character
@@ -121,6 +145,16 @@ void Print_Keys(num)
     if((num != 10) && (num != 12)) //if the num value is not a special character, print the number
     printf("[%d]\n", num);
 }
+
+/****| Read_Keypad() | *****************************************
+* Brief: scans a 4x3 matrix keypad and returns a unique number
+* for each key pressed. The character corresponding to the key
+* pressed is printed to the CCS console.
+* param:
+* N/A
+* return:
+* 1 if the keypad was pressed, 0 if the keypad was not pressed
+***************************************************************/
 
 uint8_t Read_Keypad(void)
 {
