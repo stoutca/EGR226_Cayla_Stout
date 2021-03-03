@@ -249,7 +249,7 @@ uint8_t Read_Keypad(void)
             break; // if one of the input is low, some key is pressed.
     }
 
-    P2->DIR = 0x00; // Set Columns to inputs
+    P4->DIR = 0x00; // Set Columns to inputs
     if ( col == 3)
         return 0;
     if (row == 0x0E)
