@@ -5,6 +5,7 @@
 	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.importexport.ProjectImportPage">
+		<item key="CCS.BROWSE_DIRS_FILTER" value="C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\LCD Library"/>
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.project.ProjectSettingsPage">
 		<item key="CCS.TARGET" value="devices/msp432p401r.xml"/>

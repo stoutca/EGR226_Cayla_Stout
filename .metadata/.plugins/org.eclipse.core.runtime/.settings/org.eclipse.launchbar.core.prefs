@@ -2,7 +2,7 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab5_Part3,org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab6_Part2,org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab6_Part1
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab7_Part1,org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab6_Part2,org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab7_Part3,org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab7_Part2
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab04/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab04/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
@@ -14,3 +14,6 @@ org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab5_Part3/a
 org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab6_Part1/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab6_Part2/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab6_Part2/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab7_Part1/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab7_Part1/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:EGR226_902_Stout_Lab7_Part2/activeLaunchMode=debug

@@ -1649,3 +1649,1002 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-03 18:02:12.432
 !MESSAGE CCS HTTP adapter started! [ccs.port:58734] - Open 'http://localhost:58734/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-03 18:15:47.411
+!MESSAGE Indexed 'EGR226_902_Stout_Lab7_Part1' (3 sources, 10 headers) in 0.756 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-03 20:35:17.979
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Error while executing OnRestart( 0 ): Specified reset is not allowed at this time
+	 at GEL_AdvancedReset("System Reset", 1) [msp432p401r.gel:344]
+	 at OnRestart(0)
+
+!SESSION 2021-03-04 08:35:38.891 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-04 08:35:45.890
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-04 08:35:45.896
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-04 08:36:07.015
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.656
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.665
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.676
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.683
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.691
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.731
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.771
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.809
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.849
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-04 08:36:07.959
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-04 08:36:08.079
+!MESSAGE CCS HTTP adapter started! [ccs.port:50055] - Open 'http://localhost:50055/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-04 09:29:35.454
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-04 09:29:35.475
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: Remove job failed: Register/memory write failure[22005]
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-04 11:29:18.645
+!MESSAGE Indexed 'EGR226_902_Stout_Lab7_Part2' (3 sources, 10 headers) in 0.396 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2021-03-04 11:42:35.534
+!MESSAGE Error
+!STACK 1
+C Model Exception: Core Exception [code 275] A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:50)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1230)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:88)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:318)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:296)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:179)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:159)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:147)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:118)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createSourceFile(NewSourceFileGenerator.java:109)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileCreationWizardPage.createFile(NewSourceFileCreationWizardPage.java:167)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.AbstractFileCreationWizard.finishPage(AbstractFileCreationWizard.java:43)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard.lambda$1(NewElementWizard.java:88)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:39)
+	... 7 more
+Caused by: java.lang.Exception: A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	... 19 more
+!SUBENTRY 1 org.eclipse.cdt.core 4 966 2021-03-04 11:42:35.536
+!MESSAGE A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/EGR226_902_Stout_Lab7_Part1/LCDlib.c)[275]: java.lang.Exception: A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:318)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:296)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:179)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:159)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:147)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:118)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createSourceFile(NewSourceFileGenerator.java:109)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileCreationWizardPage.createFile(NewSourceFileCreationWizardPage.java:167)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.AbstractFileCreationWizard.finishPage(AbstractFileCreationWizard.java:43)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard.lambda$1(NewElementWizard.java:88)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1230)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:88)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SUBENTRY 2 org.eclipse.core.resources 4 275 2021-03-04 11:42:35.536
+!MESSAGE A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+!STACK 0
+java.lang.Exception: A resource exists with a different case: '/EGR226_902_Stout_Lab7_Part1/LCDlib.c'.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:318)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:296)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:179)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:159)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:147)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:118)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createSourceFile(NewSourceFileGenerator.java:109)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileCreationWizardPage.createFile(NewSourceFileCreationWizardPage.java:167)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.AbstractFileCreationWizard.finishPage(AbstractFileCreationWizard.java:43)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard.lambda$1(NewElementWizard.java:88)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:39)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1230)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:88)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-04 11:55:00.876
+!MESSAGE Indexed 'LCD Library' (2 sources, 10 headers) in 0.311 sec: 1,140 declarations; 2,345 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-04 11:55:39.966
+!MESSAGE Indexed 'Timer Library' (2 sources, 10 headers) in 0.297 sec: 1,140 declarations; 2,345 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+!SESSION 2021-03-05 14:28:03.864 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-05 14:28:08.904
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-05 14:28:08.912
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-05 14:28:29.139
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.392
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.401
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.412
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.419
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.426
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.481
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.515
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.548
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.575
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 14:28:29.645
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-05 14:28:29.729
+!MESSAGE CCS HTTP adapter started! [ccs.port:62477] - Open 'http://localhost:62477/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-05 15:41:02.785
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Error while executing OnRestart( 0 ): Specified reset is not allowed at this time
+	 at GEL_AdvancedReset("System Reset", 1) [msp432p401r.gel:344]
+	 at OnRestart(0)
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-05 15:50:13.767
+!MESSAGE Indexed 'EGR226_902_Stout_Lab7_Part3' (3 sources, 10 headers) in 0.284 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-05 16:21:39.648
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\EGR226_902_Stout_Lab7_Part3\Debug\EGR226_902_Stout_Lab7_Part3.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-05 17:11:11.233
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\EGR226_902_Stout_Lab7_Part3\Debug\EGR226_902_Stout_Lab7_Part3.out Could not open file
+
+!SESSION 2021-03-05 19:39:40.612 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-05 19:39:43.687
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-05 19:39:43.699
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-05 19:39:51.334
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.540
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.558
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.571
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.584
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.597
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.610
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.621
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.635
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.646
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-05 19:39:51.657
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-05 19:39:51.752
+!MESSAGE CCS HTTP adapter started! [ccs.port:64823] - Open 'http://localhost:64823/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-05 19:52:32.692
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-05 19:52:32.984
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+!SESSION 2021-03-06 09:39:35.456 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 09:39:42.866
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 09:39:42.878
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-06 09:40:07.454
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.763
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.770
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.777
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.786
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.792
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.833
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.866
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.896
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:07.929
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 09:40:08.018
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-06 09:40:08.114
+!MESSAGE CCS HTTP adapter started! [ccs.port:59467] - Open 'http://localhost:59467/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 09:42:08.429
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 09:42:08.619
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+!SESSION 2021-03-06 10:18:23.990 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 10:18:26.556
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 10:18:26.569
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-06 10:18:34.698
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:34.949
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:34.967
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:34.982
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:34.997
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:35.007
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:35.024
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:35.039
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:35.055
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:35.069
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 10:18:35.085
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-06 10:18:35.164
+!MESSAGE CCS HTTP adapter started! [ccs.port:63033] - Open 'http://localhost:63033/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 10:18:44.068
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 10:18:44.353
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 10:59:44.281
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 10:59:52.207
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 10:59:55.330
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 10:59:56.714
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:00:01.590
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:00:03.201
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:01:10.986
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:01:23.649
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:04.819
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:04.896
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:06.029
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:07.156
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:08.269
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:10.701
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:14.748
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:15.779
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:16.814
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:19.185
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:02:29.275
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+!SESSION 2021-03-06 11:04:16.825 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 11:04:23.860
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 11:04:23.866
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-06 11:04:28.945
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.112
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.122
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.132
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.142
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.152
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.163
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.174
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.186
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.197
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 11:04:29.211
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-06 11:04:29.279
+!MESSAGE CCS HTTP adapter started! [ccs.port:51279] - Open 'http://localhost:51279/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:07:02.546
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:07:06.815
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:08:12.153
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:08:13.771
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:08:20.174
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 11:08:21.953
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:12:43.882
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:12:46.308
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:12:47.563
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:12:53.634
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:12:55.029
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:12:58.300
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:13:04.442
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:13:13.616
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:13:15.561
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:13:16.919
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:15:26.856
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:15:28.736
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:15:39.680
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:16:40.418
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:16:42.467
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:16:45.051
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:16:47.764
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:32.410
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:34.667
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:35.859
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:38.295
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:39.419
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:56.940
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:58.012
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:19:59.276
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:20:00.422
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:20:01.640
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:20:03.979
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: _JobHardwareBreakpoint::ARM_DEBUG_V7M_fpb_add_breakpoint: FPB : All resources are in use.[22062]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 15:43:22.588
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+!SESSION 2021-03-06 17:26:43.949 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 17:26:48.235
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 17:26:48.253
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-06 17:27:05.403
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.699
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.714
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.733
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.753
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.771
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.790
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.805
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.821
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.836
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 17:27:05.864
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-06 17:27:05.981
+!MESSAGE CCS HTTP adapter started! [ccs.port:50263] - Open 'http://localhost:50263/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 18:08:57.730
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 18:08:58.362
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 18:13:54.625
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 19:24:32.026
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\EGR226_902_Stout_Lab7_Part3\Debug\EGR226_902_Stout_Lab7_Part3.out Could not open file
+
+!SESSION 2021-03-06 21:57:38.125 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 21:57:41.817
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-06 21:57:41.824
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-06 21:57:47.938
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.143
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.152
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.160
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.170
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.181
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.190
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.201
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.210
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.221
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-06 21:57:48.237
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-06 21:57:48.309
+!MESSAGE CCS HTTP adapter started! [ccs.port:62624] - Open 'http://localhost:62624/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 22:35:38.454
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-06 22:35:38.478
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: Remove job failed: Register/memory write failure[22005]
+
+!SESSION 2021-03-08 19:48:38.856 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-08 19:48:47.470
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-08 19:48:47.478
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-08 19:49:11.434
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.248
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.263
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.277
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.290
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.302
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.361
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.424
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.488
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.551
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-08 19:49:12.724
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-08 19:49:12.897
+!MESSAGE CCS HTTP adapter started! [ccs.port:61900] - Open 'http://localhost:61900/ide' in web browser to see listing of available APIs...
+!SESSION 2021-03-10 20:58:09.490 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-10 20:58:18.475
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-10 20:58:18.492
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-10 20:59:06.747
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.340
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.354
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.367
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.382
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.397
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.462
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.531
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.593
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:07.649
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-10 20:59:08.054
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-10 20:59:08.271
+!MESSAGE CCS HTTP adapter started! [ccs.port:57724] - Open 'http://localhost:57724/ide' in web browser to see listing of available APIs...
+!SESSION 2021-03-11 11:44:07.088 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-11 11:44:46.978
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-11 11:44:46.986
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-11 11:44:52.589
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:52.765
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:52.775
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:52.979
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:52.990
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:53.000
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:53.011
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:53.023
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:53.034
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:53.045
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-11 11:44:53.058
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-11 11:44:53.129
+!MESSAGE CCS HTTP adapter started! [ccs.port:51465] - Open 'http://localhost:51465/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.core.jobs 2 2 2021-03-11 23:19:25.435
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.DebugUIPlugin$2
