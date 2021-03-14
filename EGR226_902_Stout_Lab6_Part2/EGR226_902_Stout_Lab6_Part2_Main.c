@@ -220,23 +220,23 @@ void Print_Keys(num)
         printf("[#]\n");
 
     if((num != 10) && (num != 12)) //if the num value is not a special character, print the number
-        printf("[%d]\n", num);
+    printf("[%d]\n", num);
 }
 
 /****| Read_Keypad() | *****************************************
-* Brief: scans a 4x3 matrix keypad and returns a unique number
-* for each key pressed. The character corresponding to the key
-* pressed is printed to the CCS console.
-* param:
-* N/A
-* return:
-* 1 if the keypad was pressed, 0 if the keypad was not pressed
-***************************************************************/
+ * Brief: scans a 4x3 matrix keypad and returns a unique number
+ * for each key pressed. The character corresponding to the key
+ * pressed is printed to the CCS console.
+ * param:
+ * N/A
+ * return:
+ * 1 if the keypad was pressed, 0 if the keypad was not pressed
+ ***************************************************************/
 
 uint8_t Read_Keypad(void)
 {
     uint8_t col, row;
-    for ( col = 0; col < 3; col++ )
+    for (col = 0; col < 3; col++ )
     {
         P4->DIR = 0x00; // Set Columns to inputs
         P4->DIR |= BIT(4+col); // Set column to output
