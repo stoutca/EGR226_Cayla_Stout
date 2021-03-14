@@ -239,8 +239,8 @@ uint8_t Read_Keypad(void)
     for ( col = 0; col < 3; col++ )
     {
         P4->DIR = 0x00; // Set Columns to inputs
-        P4->DIR |= BIT(4+col); // Set column 3 to output
-        P4->OUT &=~ BIT (4+col); // Set column 3 to LOW
+        P4->DIR |= BIT(4+col); // Set column to output
+        P4->OUT &=~ BIT (4+col); // Set column to LOW
         SysTick_delay(10); // Delay the while loop
         row = P4->IN & 0x0F; // read all rows
         while (!(P4IN & BIT0) | !(P4IN & BIT1) | !(P4IN & BIT2) | !( P4IN & BIT3) );

@@ -1,1 +1,1 @@
-"./Button_Library.obj" "./LED_Library.obj" "./main.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd" -llibc.a 
+"./Button_Library.obj" "./LED_Library.obj" "./Lab4Part1StoutMain.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd" -llibc.a 
