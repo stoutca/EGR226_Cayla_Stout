@@ -5665,3 +5665,242 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-14 14:43:52.286
 !MESSAGE CCS HTTP adapter started! [ccs.port:54393] - Open 'http://localhost:54393/ide' in web browser to see listing of available APIs...
+!SESSION 2021-03-14 16:37:12.719 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-14 16:37:21.772
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-14 16:37:21.781
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-14 16:37:30.556
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.780
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.794
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.807
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.819
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.832
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.845
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.858
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.868
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.882
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 16:37:30.898
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-14 16:37:30.962
+!MESSAGE CCS HTTP adapter started! [ccs.port:54916] - Open 'http://localhost:54916/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-14 16:56:28.372
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\EGR226_902_Stout_Lab8_Part3\Debug\EGR226_902_Stout_Lab8_Part3.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-14 17:22:49.239
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-14 17:22:49.300
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: Remove job failed: Register/memory write failure[22005]
+
+!SESSION 2021-03-14 18:19:51.437 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-14 18:20:15.743
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-14 18:20:15.753
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-14 18:20:24.681
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.915
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.926
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.937
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.948
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.958
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.969
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.983
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:24.995
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:25.006
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:20:25.025
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-14 18:20:25.129
+!MESSAGE CCS HTTP adapter started! [ccs.port:51285] - Open 'http://localhost:51285/ide' in web browser to see listing of available APIs...
+!SESSION 2021-03-14 18:30:51.100 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-14 18:30:57.867
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-14 18:30:57.876
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-14 18:31:06.462
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.701
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.711
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.723
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.736
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.747
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.759
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.770
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.779
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.790
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-14 18:31:06.804
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-14 18:31:06.903
+!MESSAGE CCS HTTP adapter started! [ccs.port:51364] - Open 'http://localhost:51364/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-14 18:42:08.091
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-14 18:42:08.144
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: Remove job failed: Register/memory write failure[22005]
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-15 11:56:38.411
+!MESSAGE Indexed 'Keypad_Library' (3 sources, 10 headers) in 0.306 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-15 16:15:59.753
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-15 16:15:59.770
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: Remove job failed: Register/memory write failure[22005]
+
+!SESSION 2021-03-16 21:11:42.870 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-16 21:11:51.162
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-16 21:11:51.183
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-16 21:12:32.897
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.286
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.298
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.310
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.321
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.331
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.369
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.410
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.448
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.486
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-16 21:12:33.590
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-16 21:12:33.760
+!MESSAGE CCS HTTP adapter started! [ccs.port:53944] - Open 'http://localhost:53944/ide' in web browser to see listing of available APIs...

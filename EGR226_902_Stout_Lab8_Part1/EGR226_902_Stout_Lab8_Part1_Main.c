@@ -18,7 +18,7 @@ void main(void)
     SysTick_Init(); //initialize the SysTick timer
     motorInit(); //call function to initialize the DC motor
 
-    float dutyCycle = 0;; //variable for controlling the dutyCycle of the motor PWM, which is the factor that affects its spee.
+    float dutyCycle = 0; //variable for controlling the dutyCycle of the motor PWM, which is the factor that affects its speed.
     //default duty cycle starts as 0, can be modified
     float T = 25; //variable for the period of the PWM. Since the frequency of the motor runs best between 30-50 Hz, 40 Hz was chosen for the frequency and the period was calculated to be 1/40 = 0.025 seconds, or 25 ms
 
