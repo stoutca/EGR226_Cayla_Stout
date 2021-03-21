@@ -5904,3 +5904,652 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-16 21:12:33.760
 !MESSAGE CCS HTTP adapter started! [ccs.port:53944] - Open 'http://localhost:53944/ide' in web browser to see listing of available APIs...
+!SESSION 2021-03-17 18:18:36.167 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-17 18:18:41.451
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-17 18:18:41.457
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-17 18:19:00.866
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.150
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.159
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.168
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.178
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.187
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.218
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.245
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.275
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.301
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 18:19:01.363
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-17 18:19:01.457
+!MESSAGE CCS HTTP adapter started! [ccs.port:56340] - Open 'http://localhost:56340/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:02:32.735
+!MESSAGE DS_ERROR: CORTEX_M4_0: JTAG Communication Error: (Error -261 @ 0x0) Invalid response was received from the XDS110. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:02:32.801
+!MESSAGE DS_ERROR: CORTEX_M4_0: Breakpoint Manager: Remove job failed: Register/memory write failure[22005]
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:03:41.532
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:03:42.265
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:03:50.728
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:03:50.831
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:03:58.430
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:03:58.863
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+!SESSION 2021-03-17 19:05:19.668 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-17 19:05:29.685
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-17 19:05:29.694
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-17 19:05:38.878
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.085
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.097
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.110
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.123
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.134
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.148
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.167
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.183
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.196
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:05:39.219
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-17 19:05:39.307
+!MESSAGE CCS HTTP adapter started! [ccs.port:57227] - Open 'http://localhost:57227/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.equinox.p2.transformer 0 0 2021-03-17 19:07:57.847
+!MESSAGE Messages while mirroring artifact descriptors.
+!SESSION 2021-03-17 19:13:19.433 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2021-03-17 19:13:23.845
+!MESSAGE An error occurred while configuring the installed items
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2021-03-17 19:13:23.845
+!MESSAGE session context was:(profile=epp.package.cpp, phase=org.eclipse.equinox.internal.p2.engine.phases.Configure, operand=null --> [R]com.ti.msp.debug_probe.zipselector.notmac 10.0.0, action=org.eclipse.equinox.internal.p2.touchpoint.natives.actions.CopyAction).
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.natives 4 0 2021-03-17 19:13:23.845
+!MESSAGE I/O Error while copying C:\ti\ccs1000\ccs\eclipse\features\com.ti.msp.debug_probe_10.0.0\com.ti.msp.debug_probe.properties - see details.
+!STACK 0
+java.io.IOException: Source: C:\ti\ccs1000\ccs\eclipse\features\com.ti.msp.debug_probe_10.0.0\com.ti.msp.debug_probe.propertiesdoes not exists
+	at org.eclipse.equinox.internal.p2.touchpoint.natives.actions.CopyAction.xcopy(CopyAction.java:122)
+	at org.eclipse.equinox.internal.p2.touchpoint.natives.actions.CopyAction.mergeCopy(CopyAction.java:108)
+	at org.eclipse.equinox.internal.p2.touchpoint.natives.actions.CopyAction.copy(CopyAction.java:79)
+	at org.eclipse.equinox.internal.p2.touchpoint.natives.actions.CopyAction.execute(CopyAction.java:41)
+	at org.eclipse.equinox.internal.p2.engine.ParameterizedProvisioningAction.execute(ParameterizedProvisioningAction.java:42)
+	at org.eclipse.equinox.internal.p2.engine.Phase.mainPerform(Phase.java:187)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:99)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:50)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:80)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:48)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.ProfileSynchronizer.executePlan(ProfileSynchronizer.java:792)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.ProfileSynchronizer.performAddRemove(ProfileSynchronizer.java:205)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.ProfileSynchronizer.synchronize(ProfileSynchronizer.java:144)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.synchronize(Activator.java:444)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:179)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:842)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:834)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:791)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1015)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:365)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:603)
+	at org.eclipse.osgi.container.Module.start(Module.java:467)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1844)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1837)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1780)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1742)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1664)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY com.ti.common.core 1 0 2021-03-17 19:13:28.286
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-17 19:13:28.295
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-17 19:13:57.906
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.135
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.148
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.159
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.174
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.187
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.202
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.218
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.230
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.240
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-17 19:13:58.254
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-17 19:13:58.593
+!MESSAGE CCS HTTP adapter started! [ccs.port:57341] - Open 'http://localhost:57341/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:14:24.101
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:14:24.576
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:14:35.125
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:14:35.351
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-03-17 19:14:36.955
+!MESSAGE Request for monitor: 'RequestMonitor (com.ti.ccstudio.leru.model.LervmBuddy$2@21d50d1f): Status ERROR: com.ti.ccstudio.debug code=20001 com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+ com.ti.ccstudio.debug.launch.LaunchValidationException: com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 20001 2021-03-17 19:14:36.955
+!MESSAGE com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!STACK 0
+com.ti.ccstudio.debug.launch.LaunchValidationException: com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+	at com.ti.ccstudio.debug.service.ApplicationService$2.onEvent(ApplicationService.java:452)
+	at com.ti.ccstudio.debug.service.ApplicationService$2.onEvent(ApplicationService.java:1)
+	at com.ti.debug.engine.impl.Application$3$1.fireCallback(Application.java:273)
+	at com.ti.debug.engine.impl.Application$3$1.run(Application.java:287)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+	at com.ti.debug.engine.impl.Application.getInitializationException(Application.java:406)
+	at com.ti.debug.engine.impl.Application.postConfigure(Application.java:398)
+	at com.ti.debug.engine.impl.Application.access$600(Application.java:58)
+	at com.ti.debug.engine.impl.Application$3$1.run(Application.java:282)
+	... 1 more
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:16:30.503
+!MESSAGE DS_ERROR: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0) An attempt to connect to the XDS110 failed. The cause may be one or more of: no XDS110 is connected, invalid firmware update, invalid XDS110 serial number, or faulty USB cable. The firmware and serial number may be updated using the xdsdfu utility found in the .../ccs_base/common/uscif/xds110 directory of your installation. View the XDS110SupportReadMe.pdf file there for instructions. (Emulation package 9.3.0.00042) 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-17 19:16:31.017
+!MESSAGE DS_ERROR: Error initializing emulator:
+(Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2021-03-17 19:16:33.789
+!MESSAGE Request for monitor: 'RequestMonitor (com.ti.ccstudio.leru.model.LervmBuddy$2@5b1e229f): Status ERROR: com.ti.ccstudio.debug code=20001 com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+ com.ti.ccstudio.debug.launch.LaunchValidationException: com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+' resulted in an error.
+!SUBENTRY 1 com.ti.ccstudio.debug 4 20001 2021-03-17 19:16:33.789
+!MESSAGE com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+!STACK 0
+com.ti.ccstudio.debug.launch.LaunchValidationException: com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+	at com.ti.ccstudio.debug.service.ApplicationService$2.onEvent(ApplicationService.java:452)
+	at com.ti.ccstudio.debug.service.ApplicationService$2.onEvent(ApplicationService.java:1)
+	at com.ti.debug.engine.impl.Application$3$1.fireCallback(Application.java:273)
+	at com.ti.debug.engine.impl.Application$3$1.run(Application.java:287)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.ti.debug.engine.IApplication$InitializationException: CS_DAP_0: Error initializing emulator: (Error -260 @ 0x0)
+An attempt to connect to the XDS110 failed.
+The cause may be one or more of: no XDS110 is connected, invalid
+firmware update, invalid XDS110 serial number, or faulty USB
+cable. The firmware and serial number may be updated using the
+xdsdfu utility found in the .../ccs_base/common/uscif/xds110
+directory of your installation. View the XDS110SupportReadMe.pdf
+file there for instructions.
+(Emulation package 9.3.0.00042)
+
+
+	at com.ti.debug.engine.impl.Application.getInitializationException(Application.java:406)
+	at com.ti.debug.engine.impl.Application.postConfigure(Application.java:398)
+	at com.ti.debug.engine.impl.Application.access$600(Application.java:58)
+	at com.ti.debug.engine.impl.Application$3$1.run(Application.java:282)
+	... 1 more
+!SESSION 2021-03-18 12:21:31.223 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-18 12:21:37.656
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-18 12:21:37.701
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-18 12:21:58.309
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.653
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.693
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.754
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.795
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.836
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.890
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:58.951
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:59.083
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:59.110
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-18 12:21:59.186
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-18 12:21:59.439
+!MESSAGE CCS HTTP adapter started! [ccs.port:58522] - Open 'http://localhost:58522/ide' in web browser to see listing of available APIs...
+!SESSION 2021-03-21 10:35:48.417 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-21 10:36:07.821
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-21 10:36:07.845
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-21 10:36:49.613
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:49.991
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.004
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.017
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.029
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.042
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.079
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.114
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.150
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.185
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 10:36:50.289
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-21 10:36:50.406
+!MESSAGE CCS HTTP adapter started! [ccs.port:62354] - Open 'http://localhost:62354/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-21 12:24:43.927
+!MESSAGE Indexed 'Pushbutton Library' (2 sources, 10 headers) in 1.01 sec: 1,140 declarations; 2,345 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-21 12:34:33.095
+!MESSAGE Indexed 'EGR226_902_Stout_Lab9_Part1' (3 sources, 10 headers) in 0.442 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY com.ti.ccstudio.debug 4 0 2021-03-21 13:36:13.638
+!MESSAGE An internal error was logged by 'com.ti.ccstudio.debug'.
+!STACK 0
+org.json.JSONException: Module Closed
+	at com.ti.cloudagent.communication.Socket$WebSocket.<init>(Socket.java:58)
+	at com.ti.cloudagent.communication.Socket.<init>(Socket.java:146)
+	at com.ti.cloudagent.communication.JSONInterface.<init>(JSONInterface.java:24)
+	at com.ti.cloudagent.Agent.<init>(Agent.java:149)
+	at com.ti.cloudagent.Agent.instance(Agent.java:50)
+	at com.ti.ccstudio.debug.service.ApplicationService.getConnectedDebugProbes(ApplicationService.java:294)
+	at com.ti.ccstudio.debug.service.ApplicationService.detectXDS110ConnectedProbes(ApplicationService.java:356)
+	at com.ti.ccstudio.debug.service.ApplicationService.initDebugger(ApplicationService.java:418)
+	at com.ti.ccstudio.debug.service.ApplicationService.access$0(ApplicationService.java:408)
+	at com.ti.ccstudio.debug.service.ApplicationService$ThreadContextCache.retrieve(ApplicationService.java:136)
+	at com.ti.ccstudio.debug.dsf.extensions.concurrent.DataCache.wait(DataCache.java:59)
+	at com.ti.ccstudio.debug.service.ApplicationService.getCpuBeingDebugged(ApplicationService.java:1057)
+	at com.ti.ccstudio.debug.launch.CCSLaunchDelegate$2.execute(CCSLaunchDelegate.java:139)
+	at org.eclipse.cdt.dsf.concurrent.Query.run(Query.java:179)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-21 13:50:14.324
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\EGR226_902_Stout_Lab9_Part1\Debug\EGR226_902_Stout_Lab9_Part1.out Could not open file
+
+!SESSION 2021-03-21 13:52:04.300 -----------------------------------------------
+eclipse.buildId=4.14.0.I20191210-0610
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 1 0 2021-03-21 13:52:08.851
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2021-03-21 13:52:08.865
+!MESSAGE debugServerDir=C:/ti/ccs1000/ccs/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.ui 1 0 2021-03-21 13:52:18.392
+!MESSAGE CCS IDE session started!
+	CCS build: 10.0.0.00010
+	CCS location: C:/ti/ccs1000/ccs
+	Workspace location: C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.598
+!MESSAGE constructor
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.610
+!MESSAGE done with directories
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.620
+!MESSAGE loading ti_logger
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.631
+!MESSAGE Platform os: win32
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.641
+!MESSAGE loading cToolsIF
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.654
+!MESSAGE loading cTools
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.664
+!MESSAGE loading TraceFactory
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.675
+!MESSAGE loading sqlite3
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.687
+!MESSAGE loading CloudTrace
+
+!ENTRY com.ti.dbgtrc.webapp.CloudTraceInterface 0 0 2021-03-21 13:52:18.702
+!MESSAGE CloudTrace interface loaded
+
+!ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-03-21 13:52:18.767
+!MESSAGE CCS HTTP adapter started! [ccs.port:62701] - Open 'http://localhost:62701/ide' in web browser to see listing of available APIs...
+
+!ENTRY com.ti.ccstudio.debug 1 0 2021-03-21 13:52:42.951
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\cayla\OneDrive - Grand Valley State University\WINTER 2021 CLASSES\EGR226_Cayla_Stout\EGR226_902_Stout_Lab9_Part1\Debug\EGR226_902_Stout_Lab9_Part1.out Could not open file
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-21 14:47:03.746
+!MESSAGE Indexed 'EGR226_902_Stout_Lab9_Part2' (3 sources, 10 headers) in 0.537 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-03-21 17:18:36.053
+!MESSAGE Indexed 'EGR226_902_Stout_Lab9_Part3' (3 sources, 10 headers) in 0.439 sec: 1,142 declarations; 2,355 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.17%)
