@@ -15,7 +15,7 @@ void Port3Interrupts_Init(void); //prototype for pushbutton pin initialization f
 void SevenSegmentLEDPinInit(void); //prototype for 7 segment LED pin initialization
 void switchNum(int);
 
-int numCount = 0; //global variable numCount initially set to 0
+volatile int numCount = 0; //global variable numCount initially set to 0
 
 void main(void)
 {

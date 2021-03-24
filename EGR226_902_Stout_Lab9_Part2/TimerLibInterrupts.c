@@ -27,7 +27,7 @@ void SysTick_Init (void)
     SysTick -> CTRL = 0; // disable SysTick During step
     SysTick -> LOAD = 1500000; // max reload value for 0.5s interrupts
     SysTick -> VAL = 0; // any write to current clears it
-    SysTick -> CTRL = 0x00000007; // enable systic, 3MHz, No Interrupts
+    SysTick -> CTRL = 0x00000007; // enable systic, 3MHz, Interrupts
 }
 //code from EGR 226 Systick Lecture Slide
 

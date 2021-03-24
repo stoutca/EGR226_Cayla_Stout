@@ -17388,3 +17388,206 @@ Finished building target: "EGR226_902_Stout_Lab9_Part1.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include" --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include/CMSIS" --include_path="C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout/EGR226_902_Stout_Lab9_Part3" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="EGR226_902_Stout_Lab9_Part3_Main.d_raw"  "../EGR226_902_Stout_Lab9_Part3_Main.c"
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 232: remark #2624-D: (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+Finished building: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+ 
+Building target: "EGR226_902_Stout_Lab9_Part3.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"EGR226_902_Stout_Lab9_Part3.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1000/ccs/ccs_base/arm/include" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EGR226_902_Stout_Lab9_Part3_linkInfo.xml" --rom_model -o "EGR226_902_Stout_Lab9_Part3.out" "./EGR226_902_Stout_Lab9_Part3_Main.obj" "./TimerLib.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 5 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 9 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 10 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "EGR226_902_Stout_Lab9_Part3.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'EGR226_902_Stout_Lab9_Part3.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+gmake[1]: 'EGR226_902_Stout_Lab9_Part3.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include" --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include/CMSIS" --include_path="C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout/EGR226_902_Stout_Lab9_Part3" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="EGR226_902_Stout_Lab9_Part3_Main.d_raw"  "../EGR226_902_Stout_Lab9_Part3_Main.c"
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 232: remark #2624-D: (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+Finished building: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+ 
+Building target: "EGR226_902_Stout_Lab9_Part3.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"EGR226_902_Stout_Lab9_Part3.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1000/ccs/ccs_base/arm/include" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EGR226_902_Stout_Lab9_Part3_linkInfo.xml" --rom_model -o "EGR226_902_Stout_Lab9_Part3.out" "./EGR226_902_Stout_Lab9_Part3_Main.obj" "./TimerLib.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 5 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 9 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 10 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "EGR226_902_Stout_Lab9_Part3.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include" --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include/CMSIS" --include_path="C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout/EGR226_902_Stout_Lab9_Part3" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="EGR226_902_Stout_Lab9_Part3_Main.d_raw"  "../EGR226_902_Stout_Lab9_Part3_Main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'EGR226_902_Stout_Lab9_Part3_Main.obj' failed
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 229: error #167: too few arguments in function call
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 230: error #66: expected a ";"
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 239: warning #12-D: parsing restarts here after previous syntax error
+ 
+INTERNAL ERROR: C:\ti\ccs1000\ccs\tools\compiler\ti-cgt-arm_20.2.0.LTS\bin\armacpia.exe experienced a segmentation fault
+                  while processing function (unknown or file scope) file ../EGR226_902_Stout_Lab9_Part3_Main.c line 256
+ 
+This is caused by a defect in the TI EABI C/C++ Parser.
+TI Customer Support may be able to suggest a workaround to avoid this.
+ 
+Upgrading to the newest version of the compiler may fix this problem.
+ 
+Contact TI in the E2E support forums at http://e2e.ti.com under
+"Development Tools", "TI C/C++ Compiler".  See the link titled
+"Submitting an issue".
+ 
+We need to see this ENTIRE error message and a complete, reproducible
+test case including ALL of the command-line options.
+Include the .pp file created by option --preproc_with_comment
+ 
+gmake: *** [EGR226_902_Stout_Lab9_Part3_Main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include" --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include/CMSIS" --include_path="C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout/EGR226_902_Stout_Lab9_Part3" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="EGR226_902_Stout_Lab9_Part3_Main.d_raw"  "../EGR226_902_Stout_Lab9_Part3_Main.c"
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 229: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 246: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+Finished building: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+ 
+Building target: "EGR226_902_Stout_Lab9_Part3.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"EGR226_902_Stout_Lab9_Part3.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1000/ccs/ccs_base/arm/include" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EGR226_902_Stout_Lab9_Part3_linkInfo.xml" --rom_model -o "EGR226_902_Stout_Lab9_Part3.out" "./EGR226_902_Stout_Lab9_Part3_Main.obj" "./TimerLib.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 5 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 9 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 10 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "EGR226_902_Stout_Lab9_Part3.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include" --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include/CMSIS" --include_path="C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout/EGR226_902_Stout_Lab9_Part3" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="EGR226_902_Stout_Lab9_Part3_Main.d_raw"  "../EGR226_902_Stout_Lab9_Part3_Main.c"
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 229: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 246: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+Finished building: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+ 
+Building target: "EGR226_902_Stout_Lab9_Part3.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"EGR226_902_Stout_Lab9_Part3.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1000/ccs/ccs_base/arm/include" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EGR226_902_Stout_Lab9_Part3_linkInfo.xml" --rom_model -o "EGR226_902_Stout_Lab9_Part3.out" "./EGR226_902_Stout_Lab9_Part3_Main.obj" "./TimerLib.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 5 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 9 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 10 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "EGR226_902_Stout_Lab9_Part3.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EGR226_902_Stout_Lab9_Part3 ****
+
+"C:\\ti\\ccs1000\\ccs\\utils\\bin\\gmake" -k -j 12 all -O 
+ 
+Building file: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include" --include_path="C:/ti/ccs1000/ccs/ccs_base/arm/include/CMSIS" --include_path="C:/Users/cayla/OneDrive - Grand Valley State University/WINTER 2021 CLASSES/EGR226_Cayla_Stout/EGR226_902_Stout_Lab9_Part3" --include_path="C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="EGR226_902_Stout_Lab9_Part3_Main.d_raw"  "../EGR226_902_Stout_Lab9_Part3_Main.c"
+"../EGR226_902_Stout_Lab9_Part3_Main.c", line 232: remark #2624-D: (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+Finished building: "../EGR226_902_Stout_Lab9_Part3_Main.c"
+ 
+Building target: "EGR226_902_Stout_Lab9_Part3.out"
+Invoking: ARM Linker
+"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"EGR226_902_Stout_Lab9_Part3.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1000/ccs/ccs_base/arm/include" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/lib" -i"C:/ti/ccs1000/ccs/tools/compiler/ti-cgt-arm_20.2.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EGR226_902_Stout_Lab9_Part3_linkInfo.xml" --rom_model -o "EGR226_902_Stout_Lab9_Part3.out" "./EGR226_902_Stout_Lab9_Part3_Main.obj" "./TimerLib.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "../msp432p401r.cmd"  -llibc.a 
+<Linking>
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 4 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 5 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 6 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 7 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 8 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 9 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 10 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "EGR226_902_Stout_Lab9_Part3.out"
+ 
+
+**** Build Finished ****
