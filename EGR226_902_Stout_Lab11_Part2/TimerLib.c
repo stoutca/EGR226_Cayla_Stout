@@ -7,7 +7,7 @@ Description: This .h file contains the function prototypes
 for the SysTick initialization and functions to delay the
 program by millisecond or microsecond increments. Timer A
 initializations and uses with a DC motor are also included here
-*************************************************************/
+ *************************************************************/
 
 #include <TimerLib.h> //include timer library
 #include "msp.h" //include msp library
@@ -68,7 +68,7 @@ void delay_micro (unsigned microsec)
 //code from EGR 226 Section 10 keypad lecture slides
 
 /****| timerA | **********************************************
- * Brief: This function initializes the timer A module
+ * Brief: This function initializes the timer A module as PWM
  * param:
  * integer type variable for the variable duty cycle
  * return:
@@ -78,7 +78,7 @@ void delay_micro (unsigned microsec)
 void timerAInit(int T, int DC)
 {
 
-    TIMER_A0->CCR[0] = T - 1; // PWM Period (# cycles of clock)
+    TIMER_A0->CCR[0] = T - 1; // PWM Period (# cycles of clock) for 40 Hz
     TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A0->CCR[1] = DC; // CCR1 PWM duty cycle
     TIMER_A0->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
@@ -127,7 +127,21 @@ void stopMotor(void)
 }
 
 
+/****| timerA2Init | **********************************************
+ * Brief: This function initializes the timer A module as input capture
+ * param:
+ * integer type variable for the variable duty cycle
+ * return:
+ * N/A
+ *************************************************************/
+
+void timerA2Init(int T)
+{
+    TIMER_A2->CCR[0] = T - 1; // PWM Period (# cycles of clock)
+    TIMER_A2->CCTL[2] = 0x4910; // Capture rising edge, Use CCI2A, Enable capture interrupt, Enable capture mode, Synchronous capture
+    TIMER_A2->CTL = 0x02E6; // SMCLK selected, 1/8 clock divider, set continuous to count, enable interrupts, Clear TAR to start
 
 
+}
 
 
