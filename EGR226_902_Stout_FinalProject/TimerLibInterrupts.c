@@ -32,8 +32,8 @@ void SysTick_Init(void)
 //code from EGR 226 Systick Lecture Slide
 
 /****| Timer32_Init | ************************************
- * Brief: This function initializes the function to
- * delay the program using the SysTick
+ * Brief: This function initializes timer32 instance 2 with
+ * interrupts in one shot period mode
  * system timer.
  * param:
  * N/A
@@ -47,6 +47,22 @@ void Timer32_Init()
     TIMER32_2->LOAD = 750750; //quarter second on 3 MHz clock
 }
 //code from EGR 226 Systick Lecture Slide
+
+/****| Timer32_1_Init | ************************************
+ * Brief: This function initializes timer32 instance 1 with
+ * interrupts in one shot period mode
+ * system timer.
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
+
+void Timer32_1_Init()
+{ //initialization of systic timer
+    TIMER32_1->CONTROL = 0b11100000; //period mode, with interrupt, no prescaler, 16 bit mode, one shot mode
+    TIMER32_1->LOAD = 15015015; //5 second timer on 3 MHz clock
+}
 
 /****| delay_ms | ************************************
  * Brief: This function delays the program for 1 millisecond
@@ -170,6 +186,7 @@ uint16_t setDutyCycle(float DC, uint16_t P)
 void timerA2Init(uint16_t T)
 {
     TIMER_A2->CCR[0] = T - 1; // PWM Period (# cycles of clock)
+    TIMER_A2->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A2->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
 
 }
@@ -185,7 +202,6 @@ void timerA2Init(uint16_t T)
 void timerA21Init(uint16_t DC)
 {
     TIMER_A2->CCR[1] = DC; // CCR1 PWM duty cycle
-    TIMER_A2->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
 }
 
 

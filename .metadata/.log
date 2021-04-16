@@ -9244,3 +9244,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.ti.ccstud
 
 !ENTRY com.ti.ccstudio.project.ui.webcontent 1 0 2021-04-16 09:45:07.094
 !MESSAGE CCS HTTP adapter started! [ccs.port:56210] - Open 'http://localhost:56210/ide' in web browser to see listing of available APIs...
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-04-16 13:47:48.718
+!MESSAGE Indexed 'EGR226_902_Stout_Lab04' (5 sources, 2 headers) in 0.187 sec: 167 declarations; 138 references; 6 unresolved inclusions; 0 syntax errors; 273 unresolved names (47%)

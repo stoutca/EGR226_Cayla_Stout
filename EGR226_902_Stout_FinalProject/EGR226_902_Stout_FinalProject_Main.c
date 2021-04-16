@@ -23,17 +23,8 @@ brightness.
  * 2 - motor menu state
  * 3 - LED menu state
  * 4 - Open Door Menu
- * 5 - Disarm pin state
- * 6 - Correct pin entered, unarm door state
- * 7 - Alarm on state
- * 8 - Alarm audio on state
- * 9 - Alarm audio off state
- * 10 - Close Door Menu
- * 11 - Prompt to arm door state
- * 12 - Leave door unarmed state
- * 13 - Check User Pin for arming door state
- * 14 - Arm closed door state
- * 15 -
+ * 5 - Close Door Menu
+ * 6 -
  *
  *
  **************************************************************/
@@ -42,23 +33,35 @@ brightness.
 #include <LCD_Lib.h>
 #include <string.h> //include the string library
 #include <stdio.h>
+#include <stdlib.h>
 #include <TimerLibInterrupts.h> //include timer interrupt library
+#include <time.h> //time library to create random seeds for the random number generator
 
 void LEDPinInit(void);
 void motorPinInit(void);
 void ADCSetup(void);
 void keypad_init(void);
 uint8_t Read_Keypad(void);
+uint16_t randNum(); //random number generator
 
 
 volatile uint16_t Vin; //global variable for storing the value of the ADC conversion, which happens on a SysTick interrupt
-volatile uint32_t num, ADCInterrupt; //global variable to use with the keypad, flag for ADC systick interrupt
+volatile uint32_t ADCInterrupt, alarmFlag, endFlag; //global variable flag for ADC timer32 interrupt, flag to sound alarm when "monster" attacks from vent
+uint8_t num, pressed; //Global variables for storing the number that was pressed on the keypad and whether or not the keypad had been pressed
 
 void main(void)
 {
     int state;
 
     int stateChangeflag = 1; //flag to tell program when a state change has occured. This helps prevent blinking on the LCD
+
+    uint16_t rand;
+
+    endFlag = 0; //start the program with the ending flag at 0
+
+    int randGenerated = 0;
+
+    int tryAgainFlag = 0; //flag to tell the program if the user has used the program once before and is running through it again
 
     //time initializations
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
@@ -74,12 +77,12 @@ void main(void)
     LCD_init(); //initialize the LCD
     Timer32_Init(); //initialize timer 32
 
-    //turn off LEDs, but leave P2.0 on as system starts armed
+    //turn off LEDs, but leave P1.6 on as system starts armed
+    P1->OUT &= ~BIT7; //turn off green led
+    P1->OUT |= BIT6; //turn on red LED
 
     //close door - armed initially
-    int armed = 1; //flag to keep track of if the door is armed
     int alarmSound = 0; //flag to tell if the alarm is beeping or not
-    int alarmFlag = 0; //flag to tell if alarm is on or not
     int openDoor = 0; //flag to tell program that the door is closed
 
     //strings for main menu
@@ -93,23 +96,11 @@ void main(void)
     char openDoorOption[] = " Option 1: Open "; //second line of door menu
     char closeDoorOption[] = "Option 2: Close "; //third line of door menu
 
-    //disarming/arming door strings
-    char disarmPin[] = "5675"; //pin to arm and disarm the door
-    char promptPin1[] = "  Please enter  "; //prompt to user on first line
-    char promptPin2[] = "The Disarm Pin: "; //prompt to user on second line
-    char acceptedPin[] = "Pin Accepted :)"; //print on LCD if pin is accepted
-    char alarmOnString1[] = "Alarm On: Enter "; //if pin was wrong, print on first line
-    char alarmOnString2[] = " Pin to Disarm  "; //if pin was wrong, pring on second line
-
-    //strings for rearming/leaving disarmed closed door
-    char armOption1[] = "  1) Enter Pin  "; //print on line 1
-    char armOption2[] = "2) Leave Unarmed"; //print on line 2
-
     //Variables for servo
     uint16_t Period_Servo = setPeriod(50); //variable to hold the period of the 50Hz servo
-    float DC_Servo;
+    uint16_t DC_Servo = setDutyCycle(0.1, Period_Servo); //set the duty cycle at 10% to start the servo at a 2ms period for the 0 degree position
     timerA2Init(Period_Servo); //set the timer A2 module for the servo motor and DC motor to run off of. This will be the period for TA2.1 and TA2.2
-    timerA21Init(0); //start with the servo off to start
+    timerA21Init(DC_Servo); //start with the servo closed to start
 
     //Variables for PWM LCD Backlight
     float DC_LCD1;
@@ -123,10 +114,31 @@ void main(void)
 
     //initialize NVIC interrupts for certain pins
     NVIC_EnableIRQ(T32_INT2_IRQn); //Enable Timer32_2 interrupt.
+    NVIC_EnableIRQ(T32_INT1_IRQn); //Enable Timer32_1 interrupt.
+
     __enable_irq(); //enable global interrupts
 
     while(1)
     {
+        //check if the user selected the option to try again, reset all beginning variables
+        if(tryAgainFlag == 1)
+        {
+            endFlag = 0; //start the program with the ending flag at 0
+
+            randGenerated = 0;
+
+            tryAgainFlag = 0; //flag to tell the program if the user has used the program once before and is running through it again
+
+            DC_Servo = setDutyCycle(0.1, Period_Servo); //set the duty cycle at 5% to start the servo at a 1ms period for the 0 degree position
+
+            timerA21Init(DC_Servo); //start with the servo closed to start
+
+            state = 0; //start the system in state 0, which is the "main menu" state
+
+            //turn off LEDs, but leave P1.6 on as system starts armed
+            P1->OUT &= ~BIT7; //turn off green led
+            P1->OUT |= BIT6; //turn on red LED
+        }
         //check if systick ADC interrupt flag has triggered
         if(ADCInterrupt == 1)
         {
@@ -134,6 +146,39 @@ void main(void)
             DC_LCD1 = (Vin * 0.0002)/3.3; //save the decimal value of Vin to the duty cycle for the LCD by converting Vin to a voltage and dividing it by the reference voltage 3.3V
             DC_LCD = setDutyCycle(DC_LCD1, Period_LCD); //Get the duty cycle, in counts, for the adjusted LCD brightness
             timerA04Init(DC_LCD); //set the new DC for the PWM controlling the LCD brightness
+        }
+
+        //if a number hasn't been generated yet
+        if(randGenerated == 0)
+        {
+            srand(time(0));
+            rand = randNum();
+            randGenerated = 1; //tell the program a number has been generated
+        }
+
+        //if a random number is generated
+        if(randGenerated)
+        {
+            randGenerated = 0; //preemptively set the flag to 0
+            //if the random number generated is 21
+            if(rand == 7)
+            {
+                //activate the alarm in the vent, acting like something is hunting the user
+                alarmFlag = 1;
+
+                Timer32_1_Init(); //start the one-shot 5 second timer
+                //start alarm sound
+                //user has 5 seconds to close door
+
+                randGenerated = 1; //reset the flag to 1 so no new numbers will be generated
+            }
+            //if the random number was not 21, continue looking for a random number in the next cycle
+        }
+
+        //if the user "died"
+        if(endFlag == 1)
+        {
+            //state = ("death state");
         }
 
         switch(state)
@@ -166,13 +211,14 @@ void main(void)
                 stateChangeflag = 0;
             }
 
-
-            if(Read_Keypad) //if the keypad is pressed
+            pressed = Read_Keypad();
+            if(pressed) //if the keypad is pressed
             {
                 //if 1 is pressed on keypad, change state to 1 - Door Menu
                 if(num == 1)
                 {
-                    //state = 1;
+                    state = 1;
+                    stateChangeflag = 1;
                 }
 
                 //if 2 is pressed on keypad, change state to 2 - Motor Menu
@@ -218,31 +264,32 @@ void main(void)
                 commandWrite(0x90); //line 3
                 printString(closeDoorOption);
 
-                delay_ms(100); //delay 100 ms so the LCD can print everything
+                delay_ms(100); //delay 500 ms so the LCD can print everything and so the user cannot press buttons more than 2 times a second
                 stateChangeflag = 0; //reset the flag so the program knows that the state has been activated
             }
 
             //don't accept any input unless it is a 1 or 0 - keep accepting input until desired number is entered
-            if(Read_Keypad)
+            pressed = Read_Keypad(); //get keypad input
+            if(pressed)
             {
                 //if 1 is pressed, change state to 4 - open door state
                 if(num == 1)
                 {
-                    //state = 4;
-                    //stateChangeflag = 1;
+                    state = 4;
+                    stateChangeflag = 1;
                 }
 
-                //if 2 is pressed, change state to 10 - close door state
+                //if 2 is pressed, change state to 5 - close door state
                 else if(num == 2)
                 {
-                    //state = 10;
-                    //stateChangeflag = 1;
+                    state = 5;
+                    stateChangeflag = 1;
                 }
 
                 //if neither 1 nor 2 was pressed
                 else if((num!=1) || (num!=2))
                 {
-                    //state = 1; //stay in the current state
+                    state = 1; //stay in the current state
                 }
 
             }
@@ -257,197 +304,68 @@ void main(void)
 
             //move servo to closed position - 180 degrees
             //change PWM of servo to 2ms - 10% duty cycle
+            DC_Servo = setDutyCycle(0.05, Period_Servo); //calculate the duty cycle in counts
+            timerA21Init(DC_Servo); //set the duty cycle in the servo PWM
 
-            //move to state 5 to prompt user to disarm door
-            //state = 5;
-            //stateChangeflag = 1;
+            //turn on green LED, red LED off
+            P1->OUT &= ~BIT6;
+            P1->OUT |= BIT7;
+
+            //move to state 1 to main menu
+            state = 0;
+            stateChangeflag = 1;
 
             break;
 
-            //Disarm Door State
+            //Close Door State
         case 5:
-            //Check armed flag. If true,
-            //Prompt user to enter the right pin to disarm door. Pin is 5675
+            //If the door is open and the alarm is sounding
+            if((openDoor == 1) && (alarmFlag == 1))
+            {
+                alarmFlag = 0; //user closed the door, so deactivate alarm flag
+                //turn off buzzer sound
+            }
+            //move servo to 0 degrees by sending 5% duty cycle to servo PWM, closes door
+            DC_Servo = setDutyCycle(0.1, Period_Servo); //set new duty cycle in counts
+            timerA21Init(DC_Servo); //set new duty cycle in servo PWM
 
+            //turn on red LED, green LED off
+            P1->OUT |= BIT6;
+            P1->OUT &= ~BIT7;
 
-            //Check input pin, compare to real pin
-            //Start 5 second timer with timer32
-
-
-            //if pin is wrong, continue the timer
-
-
-            //if pin is correct, stop timer, switch to state 6 - unarmed door state
-
-
-            //if timer reaches 5 seconds before correct pin is entered, move to state 7 - alarm on state
-
-
-            //if the armed flag was false, switch to state 7 to turn on alarm
+            //change state to main menu state
+            state = 0;
 
             break;
 
             //unarmed door state
         case 6:
 
-            //Clear screen, move cursor to home position
-
-
-            //print acceptance string to LCD on first line
-
-
-            //set the flag to sound the alarm to 0
-
-
-            //turn on Green Onboard LED and turn off red
-
-
-            //if the alarm sound was going off, go to state 9 - alarm audio off state
-
             break;
 
-            //alarm on state
-        case 7:
-
-            //Clear screen of LCD, move cursor to home position
-
-
-            //print to the LCD that the alarm is on
-
-
-            //set alarmFlag to 1 to turn on alarm system
-
-
-            //set armed flag to 1 to tell program that they system is still armed
-
-
-            //change state to state 8 - alarm audio on state
-            break;
-
-            //alarm on state
-        case 8:
-
-            //check the alarmFlag value. If 1, turn on alarmSound
-
-
-            //trip alarmSound flag, setting it to 1 to alert program that the piezzo buzzer is making noise
-
-
-            //change state to state 5 - disarming with pin state to prompt the user for the pin more
-
-            break;
-
-            //alarm audio off state
-        case 9:
-
-            //check alarmSound flag. If true, set it to 0
-
-
-            //also stop the alarm sound
-
-
-            //change state to the main menu state 0
-            //state = 0;
-            break;
-
-            //Close door state
-        case 10:
-
-            //clear screen and reset cursor in home position
-
-            //If the door was open before choosing this option:
-            //move servo to 0 degrees by sending 5% duty cycle to servo PWM, closes door
-            //turn on Green LED
-
-            //change state to 11 - Prompting the user to arm the door
-            break;
-
-            //prompting the user to arm the door state
-        case 11:
-
-            //print the menu options to the LCD:
-            //Option 1: Enter the pin to arm the door
-
-
-            //Option 2: Leave the door unarmed
-
-
-            //if 1 is entered, change state to 13 - accept and check pin
-
-
-            //if 2 is entered, change state to 12 - set door to unarmed
-
-            break;
-
-            //Leave door unarmed state
-        case 12:
-
-            //clear LCD screen and move cursor to home position
-
-
-            //set the armed flag to 0 to signify that the door is not armed
-
-
-            //turn P2.0 off, turn on P2.1
-
-            //change state to main menu state 0
-            //state = 0;
-            break;
-
-            //check user pin for disarming door state
-        case 13:
-
-            //clear LCD screen and move cursor to home position
-
-
-            //Prompt user for pin. Don't accept any input until a viable option is entered
-
-
-            //Check the input and compare it to the real pin - 5675
-
-
-            //If pin was correct, move to state 14 - setting door to armed state
-
-
-            //if pin was not correct, stay in state
-            //state = 13;
-            break;
-
-            //armed and closed door state
-        case 14:
-
-            //Clear screen
-
-
-            //set armed flag to 1 to tell system that the door is closed and armed
-
-
-            //Turn off green LED, turn on red LED
-
-            //change state to main menu state 0
-            //state = 0;
-            break;
-
-
-        case 15:
-
-
-            break;
         }
     }
 }
 
 void LEDPinInit()
 {
-    //P2.0 red onboard LED
+    //P1.6 red LED
+    P1->SEL0 &= ~BIT6; //set as GPIO output
+    P1->SEL1 &= ~BIT6;
+    P1->DIR |= BIT6;
 
-
-    //P2.1 green onboard LED
+    //P1.7 green LED
+    P1->SEL0 &= ~BIT7; //set as GPIO output
+    P1->SEL1 &= ~BIT7;
+    P1->DIR |= BIT7;
 
     //LCD Background PWM pin
-    P2->SEL0 &= ~BIT7;
-    P2->SEL1 &= ~(BIT7);
+    P2->SEL0 |= BIT7;
+    P2->SEL1 &= ~BIT7;
     P2->DIR |= BIT7; // P2.4 set TA2.1
+
+    //RBG pin init to PWM
+
 
 }
 
@@ -559,23 +477,23 @@ uint8_t Read_Keypad()
         P3->DIR |= BIT(5+col); // Set column to output
         P3->OUT &= ~BIT(5+col); // Set column to LOW
         delay_ms(10); // Delay the while loop
-        row = P5->IN & 0xF0; // read all rows
-        while (!(P5IN & BIT4) | !(P5IN & BIT5) | !(P5IN & BIT6) | !( P5IN & BIT7) );
+        row = P4->IN & 0x0F; // read all rows
+        while (!(P4IN & BIT0) | !(P4IN & BIT1) | !(P4IN & BIT2) | !(P4IN & BIT3) );
 
-        if (row != 0xF0)
+        if (row != 0x0F)
             break; // if one of the input is low, some key is pressed.
     }
 
-    P3->DIR = 0x00; // Set Columns to inputs
+    P3->DIR = 0x00; // Set Columns to inputs on P3.5, P3.6, and P3.7
     if ( col == 3)
         return 0;
-    if (row == 0xE0)
+    if (row == 0x0E)
         num = col + 1; // key in row 0
-    if (row == 0xD0)
+    if (row == 0x0D)
         num = 3 + col +1; // key in row 1
-    if (row == 0xB0)
+    if (row == 0x0B)
         num = 6 + col +1; // key in row 2
-    if (row == 0x70)
+    if (row == 0x07)
         num = 9 + col+1; // key in row 3
     return 1;
 }
@@ -600,5 +518,44 @@ void T32_INT2_IRQHandler(void) //Interrupt Handler for Timer 2.
     TIMER32_2->LOAD = 750750; //Set to a countdown of 0.25 second on 3 MHz clock
 }
 
+/****| randNum | ********************************************
+ * Brief: This function generates a random number to initiate
+ * the "hunt" of the monsters
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
+uint16_t randNum()
+{
+    int upper = 20;
+    int lower = 0;
+    int count = 10;
+    int rand_num;
+    int i;
+    for (i = 0; i < count; i++) {
+        rand_num = (rand() % (upper - lower + 1)) + lower;
+        return rand_num;
+    }
+}
 
+/****| T32_INT1_IRQHandler | *************************************
+ * Brief: This function handles the IRQ for the interrupts in
+ * the 32 bit timer and reloads the counts with half second
+ * periodic one-shot count downs
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
 
+void T32_INT1_IRQHandler(void) //Interrupt Handler for Timer 2.
+{
+    //if the user did not close the door before the timer expired
+    if(alarmFlag == 1)
+    {
+        endFlag = 1;
+        //turn off buzzer sound
+    }
+    TIMER32_1->INTCLR = 1; //Clear interrupt flag so it does not interrupt again immediately.
+}

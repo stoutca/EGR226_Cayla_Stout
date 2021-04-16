@@ -23,6 +23,7 @@ void timerA2Init(uint16_t T);
 void timerA21Init(uint16_t T);
 uint16_t setPeriod(uint16_t frequency);
 void Timer32_Init(void);
+void Timer32_1_Init();
 uint16_t setDutyCycle(float, uint16_t T);
 void stopMotor(void);
 
