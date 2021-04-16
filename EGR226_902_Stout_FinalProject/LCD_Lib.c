@@ -96,11 +96,11 @@ void LCDPinInit(void)
 
 void PulseEnablePin (void)
 {
-    P4->OUT &=~BIT2; // make sure pulse starts out at 0V from P4.2
+    P6->OUT &=~BIT1; // make sure pulse starts out at 0V from P4.2
     delay_micro(10); //delay 10 microseconds
-    P4->OUT |=BIT2; //pulse the enable pin to 1
+    P6->OUT |=BIT1; //pulse the enable pin to 1
     delay_micro(10); //wait 10 microseconds
-    P4->OUT &=~BIT2; //make pulse back to 0V
+    P6->OUT &=~BIT1; //make pulse back to 0V
     delay_micro(10); //wait for 10 milliseconds
 }
 
@@ -152,7 +152,7 @@ void pushByte (uint8_t byte)
 
 void commandWrite(uint8_t command)
 {
-    P4->OUT &= ~BIT1; //set the RS pin to 0, RS pin is P4.1
+    P6->OUT &= ~BIT0; //set the RS pin to 0, RS pin is P4.1
     pushByte(command);
 }
 
@@ -167,7 +167,7 @@ void commandWrite(uint8_t command)
 
 void dataWrite(uint8_t data)
 {
-    P4->OUT |= BIT1; //set the RS pin to High, RS pin is P4.1
+    P6->OUT |= BIT0; //set the RS pin to High, RS pin is P4.1
     pushByte(data);
 }
 

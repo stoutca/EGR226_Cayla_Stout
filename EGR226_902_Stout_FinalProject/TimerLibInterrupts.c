@@ -25,9 +25,9 @@ initializations and uses with a DC motor are also included here
 void SysTick_Init(void)
 { //initialization of systic timer
     SysTick -> CTRL = 0; // disable SysTick During step
-    SysTick -> LOAD = 0x00FFFFFF; // max reload value for 0.5s interrupts
+    SysTick -> LOAD = 0x00FFFFFF; // max reload value for 0.5s uint16_terrupts
     SysTick -> VAL = 0; // any write to current clears it
-    SysTick -> CTRL = 0x00000005; // enable systic, 3MHz, Interrupts
+    SysTick -> CTRL = 0x00000005; // enable systic, 3MHz, interrupts
 }
 //code from EGR 226 Systick Lecture Slide
 
@@ -44,7 +44,7 @@ void SysTick_Init(void)
 void Timer32_Init()
 { //initialization of systic timer
     TIMER32_2->CONTROL = 0b11100000; //period mode, with interrupt, no prescaler, 16 bit mode, one shot mode
-    TIMER32_2->LOAD = 1501501; //half second on 3 MHz clock
+    TIMER32_2->LOAD = 750750; //quarter second on 3 MHz clock
 }
 //code from EGR 226 Systick Lecture Slide
 
@@ -88,14 +88,15 @@ void delay_micro (unsigned microsec)
  * Brief: This function initializes the timer A0 module. This instance
  * is mainly used by the LEDs
  * param:
- * integer type variable period
+ * uint16_t type variable period
  * return:
  * N/A
  *************************************************************/
 
-void timerA0Init(int T)
+void timerA0Init(uint16_t T)
 {
     TIMER_A0->CCR[0] = T - 1; // PWM Period (# cycles of clock) for 100 Hz
+    TIMER_A0->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7; // CCR4 reset/set mode 7
     TIMER_A0->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
 }
 
@@ -103,84 +104,70 @@ void timerA0Init(int T)
  * Brief: This function initializes the timer A0.1 module for the red
  * LED
  * param:
- * integer type variable for the variable duty cycle
+ * uint16_t type variable for the variable duty cycle
  * return:
  * N/A
  *************************************************************/
 
-void timerA01Init(int DC)
+void timerA01Init(uint16_t DC)
 {
     TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A0->CCR[1] = DC; // CCR1 PWM duty cycle
 }
 
 /****| timerA04Init | **********************************************
- * Brief: This function initializes the timer A0.1 module for brightness
+ * Brief: This function initializes the timer A0.4 module for brightness
  * of the LCD
  * param:
- * integer type variable for the variable duty cycle
+ * uint16_t type variable for the variable duty cycle
  * return:
  * N/A
  *************************************************************/
 
-void timerA04Init(int DC)
+void timerA04Init(uint16_t DC)
 {
-    TIMER_A0->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A0->CCR[4] = DC; // CCR4 PWM duty cycle
 }
 
 /****| setPeriod | **********************************************
  * Brief: This function initializes the timer A module
  * param:
- * integer type variable for the variable duty cycle
+ * uint16_t type variable for the variable duty cycle
  * return:
  * N/A
  *************************************************************/
-int setPeriod(int frequency)
+uint16_t setPeriod(uint16_t frequency)
 {
-    int period = (float)(((1/(float)frequency))/(0.0000026667)); //gets the period into seconds based on SMCLK frequency - 3MHz/8 = 375kHz = period of 2.6667 microseconds
+    uint16_t period = (float)(((1/(float)frequency))/(0.0000026667)); //gets the period uint16_to seconds based on SMCLK frequency - 3MHz/8 = 375kHz = period of 2.6667 microseconds
     return period;
 }
 
 /****| setDutyCycle| **********************************************
  * Brief: This function sets the dutyCycle of the timer A module
  * param:
- * float type duty cycle value and int period value
+ * float type duty cycle value and uint16_t period value
  * return:
- * int value of the duty cycle in counts
+ * uint16_t value of the duty cycle in counts
  *************************************************************/
 
-int setDutyCycle(float DC, int P)
+uint16_t setDutyCycle(float DC, uint16_t P)
 {
-    int dCycle = (int)((float)P * DC); //calculate the value of the duty cycle in counts from the given period in counts
+    uint16_t dCycle = (uint16_t)((float)P * DC); //calculate the value of the duty cycle in counts from the given period in counts
     if(dCycle != 0) //if the duty cycle percentage isn't 0
         dCycle--; //decrement dCycle so it doesn't have a greater value than the period
     return dCycle;
 }
 
-/****| stopMotor | **********************************************
- * Brief: This function stops the motor by setting the PWM to 0
- * param:
- * N/A
- * return:
- * N/A
- *************************************************************/
-
-void stopMotor(void)
-{
-    TIMER_A0->CCR[0] = 0; // set the motor to 0
-}
-
-/****| timer2Init | **********************************************
+/****| timerA2Init | **********************************************
  * Brief: This function initializes the timer A2 module PWM for
  * use in the DC motor and Servo
  * param:
- * integer type variable for the period of a 50 Hz frequency
+ * uint16_teger type variable for the period of a 50 Hz frequency
  * return:
  * N/A
  *************************************************************/
 
-void timerA2Init(int T)
+void timerA2Init(uint16_t T)
 {
     TIMER_A2->CCR[0] = T - 1; // PWM Period (# cycles of clock)
     TIMER_A2->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
@@ -190,12 +177,12 @@ void timerA2Init(int T)
 /****| timerA21Init | **********************************************
  * Brief: This function initializes the timer A module as input capture
  * param:
- * integer type variable for the variable duty cycle
+ * uint16_teger type variable for the variable duty cycle
  * return:
  * N/A
  *************************************************************/
 
-void timerA21Init(int DC)
+void timerA21Init(uint16_t DC)
 {
     TIMER_A2->CCR[1] = DC; // CCR1 PWM duty cycle
     TIMER_A2->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
