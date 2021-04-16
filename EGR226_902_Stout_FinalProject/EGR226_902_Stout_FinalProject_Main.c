@@ -597,7 +597,7 @@ void T32_INT2_IRQHandler(void) //Interrupt Handler for Timer 2.
     Vin = ADC14->MEM[5]; // immediately store value in a variable
     ADCInterrupt = 1; //set the global flag to tell the main() function that an interrupt has occured
     TIMER32_2->INTCLR = 1; //Clear interrupt flag so it does not interrupt again immediately.
-    TIMER32_2->LOAD = 750750; //Set to a countdown of 3 second on 3 MHz clock
+    TIMER32_2->LOAD = 750750; //Set to a countdown of 0.25 second on 3 MHz clock
 }
 
 
