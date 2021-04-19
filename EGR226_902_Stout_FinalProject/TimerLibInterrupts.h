@@ -17,7 +17,12 @@ void delay_ms(unsigned ms); //function to delay the program for a certain number
 void delay_micro(unsigned microsec); //function to delay the program for a certain number of microseconds
 void SysTick_Init(void); //function to initialize SysTick timer
 void timerA0Init(uint16_t T); //function prototype to initialize the Timer A modules
-void timerA04Init(uint16_t T);
+void timerA1Init(uint16_t T);
+void timerA01Init(uint16_t DC);
+void timerA03Init(uint16_t DC);
+void timerA02Init(uint16_t DC);
+void timerA04Init(uint16_t DC);
+void timerA14Init(uint16_t T);
 void timerA2Init(uint16_t T);
 //void timerA01Init(uint16_t); //function prototype to initialize the Timer A modules
 void timerA21Init(uint16_t T);

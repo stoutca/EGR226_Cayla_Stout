@@ -60,7 +60,7 @@ void Timer32_Init()
 
 void Timer32_1_Init()
 { //initialization of systic timer
-    TIMER32_1->CONTROL = 0b11100000; //period mode, with interrupt, no prescaler, 16 bit mode, one shot mode
+    TIMER32_1->CONTROL = 0b11100011; //period mode, with interrupt, no prescaler, 16 bit mode, one shot mode
     TIMER32_1->LOAD = 15015015; //5 second timer on 3 MHz clock
 }
 
@@ -112,13 +112,16 @@ void delay_micro (unsigned microsec)
 void timerA0Init(uint16_t T)
 {
     TIMER_A0->CCR[0] = T - 1; // PWM Period (# cycles of clock) for 100 Hz
+    TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
+    TIMER_A0->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
+    TIMER_A0->CCTL[3] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A0->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7; // CCR4 reset/set mode 7
     TIMER_A0->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
 }
 
 /****| timerA01Init | **********************************************
- * Brief: This function initializes the timer A0.1 module for the red
- * LED
+ * Brief: This function initializes the timer A0.1 module for PWM
+ * for the green LED
  * param:
  * uint16_t type variable for the variable duty cycle
  * return:
@@ -127,8 +130,35 @@ void timerA0Init(uint16_t T)
 
 void timerA01Init(uint16_t DC)
 {
-    TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A0->CCR[1] = DC; // CCR1 PWM duty cycle
+}
+
+/****| timerA02Init | **********************************************
+ * Brief: This function initializes the timer A0.2 module for PWM to the
+ * red LED
+ * param:
+ * uint16_t type variable for the variable duty cycle
+ * return:
+ * N/A
+ *************************************************************/
+
+void timerA02Init(uint16_t DC)
+{
+    TIMER_A0->CCR[2] = DC; // CCR1 PWM duty cycle
+}
+
+/****| timerA03Init | **********************************************
+ * Brief: This function initializes the timer A0.2 module for PWM to the
+ * blue LED
+ * param:
+ * uint16_t type variable for the variable duty cycle
+ * return:
+ * N/A
+ *************************************************************/
+
+void timerA03Init(uint16_t DC)
+{
+    TIMER_A0->CCR[3] = DC; // CCR1 PWM duty cycle
 }
 
 /****| timerA04Init | **********************************************
@@ -174,6 +204,39 @@ uint16_t setDutyCycle(float DC, uint16_t P)
     return dCycle;
 }
 
+/****| timerA1Init | **********************************************
+ * Brief: This function initializes the timer A1 module PWM for
+ * use in the piezzo buzzer
+ * param:
+ * uint16_teger type variable for the period of a 50 Hz frequency
+ * return:
+ * N/A
+ *************************************************************/
+
+void timerA1Init(uint16_t T)
+{
+    TIMER_A1->CCR[0] = T - 1; // PWM Period (# cycles of clock)
+    TIMER_A1->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
+    TIMER_A1->CTL = 0x0214; // SMCLK selected, no clock divider, set up mode to count, Clear TAR to start
+
+}
+
+/****| timerA14Init | **********************************************
+ * Brief: This function initializes the timer A1.4 module for PWM
+ * in the piezzo buzzer
+ * param:
+ * uint16_teger type variable for
+ * the period of the music note frequency in counts
+ * return:
+ * N/A
+ *************************************************************/
+
+void timerA14Init(uint16_t T)
+{
+    TIMER_A1->CCR[0] = T; //set the period to the clock cycle count frequency
+    TIMER_A1->CCR[4] = T/2; // CCR1 PWM duty cycle to be 50% of the period
+}
+
 /****| timerA2Init | **********************************************
  * Brief: This function initializes the timer A2 module PWM for
  * use in the DC motor and Servo
@@ -192,9 +255,10 @@ void timerA2Init(uint16_t T)
 }
 
 /****| timerA21Init | **********************************************
- * Brief: This function initializes the timer A module as input capture
+ * Brief: This function initializes the timer A module as PWM output
+ * DC modulation
  * param:
- * uint16_teger type variable for the variable duty cycle
+ * uint16_t type variable for the variable duty cycle
  * return:
  * N/A
  *************************************************************/
