@@ -7,6 +7,8 @@
 void Tone(uint16_t tone);
 uint16_t frequencyConvert(uint16_t frequency);
 void noTone(void);
+void deathTune(void);
+void winTune(void);
 
 
 #endif /* BUZZERLIB_H_ */

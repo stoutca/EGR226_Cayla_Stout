@@ -24,12 +24,13 @@ void timerA02Init(uint16_t DC);
 void timerA04Init(uint16_t DC);
 void timerA14Init(uint16_t T);
 void timerA2Init(uint16_t T);
-//void timerA01Init(uint16_t); //function prototype to initialize the Timer A modules
+void timerA22Init(uint16_t DC);
 void timerA21Init(uint16_t T);
 uint16_t setPeriod(uint16_t frequency);
 void Timer32_Init(void);
 void Timer32_1_Init();
 uint16_t setDutyCycle(float, uint16_t T);
 void stopMotor(void);
+void ADCSetup(void);
 
 #endif /* TIMERLIBINTERRUPTS_H_ */

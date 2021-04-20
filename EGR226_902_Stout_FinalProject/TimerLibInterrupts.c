@@ -239,7 +239,7 @@ void timerA14Init(uint16_t T)
 
 /****| timerA2Init | **********************************************
  * Brief: This function initializes the timer A2 module PWM for
- * use in the DC motor and Servo
+ * use in the Servo
  * param:
  * uint16_teger type variable for the period of a 50 Hz frequency
  * return:
@@ -250,8 +250,23 @@ void timerA2Init(uint16_t T)
 {
     TIMER_A2->CCR[0] = T - 1; // PWM Period (# cycles of clock)
     TIMER_A2->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
+    TIMER_A2->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A2->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
 
+}
+
+/****| timerA23Init | **********************************************
+ * Brief: This function initializes the timer A module as PWM output for the
+ * servo and DC motor
+ * param:
+ * uint16_t type variable for the variable duty cycle
+ * return:
+ * N/A
+ *************************************************************/
+
+void timerA22Init(uint16_t DC)
+{
+    TIMER_A2->CCR[2] = DC; // CCR1 PWM duty cycle
 }
 
 /****| timerA21Init | **********************************************
@@ -268,6 +283,27 @@ void timerA21Init(uint16_t DC)
     TIMER_A2->CCR[1] = DC; // CCR1 PWM duty cycle
 }
 
+/****| ADCSetup | ********************************************
+ * Brief: This function initializes the ADC converter located on
+ * P5.5 of the MSP
+ * param:
+ * N/A
+ * return:
+ * N/A
+ *************************************************************/
+
+void ADCSetup()
+{
+    ADC14->CTL0 = 0x00000010; //power on and disabled during configuration
+    ADC14->CTL0 |= 0x04D80300; // S/H pulse mode, MCLCK, 32 sample clocks,
+    //sw trigger, /4 clock divide
+    ADC14->CTL1 = 0x00000030; // 14-bit resolution
+    ADC14->MCTL[5] = 0; // A0 input, single ended, vref=avcc
+    P5->SEL1 |= 0x20; // configure pin 5.5 for ADC use
+    P5->SEL0 |= 0x20;
+    ADC14->CTL1 |= 0x00050000; //start converting at mem reg 5
+    ADC14->CTL0 |= 2; //enable ADC after configuration
+}
 
 
 
