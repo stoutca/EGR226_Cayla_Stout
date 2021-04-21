@@ -28,8 +28,6 @@ the user can choose to try again and the program will reset.
  * A - Try Again State
  * W - Win State
  * P - Power out state
- *
- *
  **************************************************************/
 //needed libraries
 #include "msp.h"
@@ -50,7 +48,7 @@ volatile uint16_t attacks = 0; //global variable for storing how many times the 
 volatile uint32_t ADCInterrupt, alarmFlag, endFlag, alarmSound;
 volatile uint32_t firstTime, RGBLightFlagOn, RGBOn, stopMotorflag, powerDownFlag; //global variables used in interrupts to handle various functions from the sensors
 uint8_t num, pressed; //global variables for the keypad presses
-volatile uint32_t openDoor = 1; //volatile variable for whether or not the door is closed
+volatile uint32_t openDoor = 0; //volatile variable for whether or not the door is closed. Starts closed
 volatile float power = 100; //variable for the overall power. Battery drains slowly depending on what the user has on
 
 void main(void)
@@ -131,7 +129,7 @@ void main(void)
 
     //Variables for servo
     uint16_t Period_Servo = setPeriod(50); //variable to hold the period of the 50Hz servo
-    uint16_t DC_Servo = setDutyCycle(0.05, Period_Servo); //set the duty cycle at 5% to start the servo at a 1ms period for the 0 degree position
+    uint16_t DC_Servo = setDutyCycle(0.1, Period_Servo); //set the duty cycle at 10% to start the servo at a 2ms period for the closed degree position
     timerA2Init(Period_Servo); //set the timer A2 module for the servo motor and DC motor to run off of. This will be the period for TA2.1 and TA2.2
     timerA21Init(DC_Servo); //start with the servo closed to start
 
@@ -228,7 +226,7 @@ void main(void)
 
             tryAgainFlag = 0; //flag to tell the program if the user has used the program once before and is running through it again
 
-            DC_Servo = setDutyCycle(0.05, Period_Servo); //set the duty cycle at 5% to start the servo at a 1ms period for the 0 degree position
+            DC_Servo = setDutyCycle(0.1, Period_Servo); //set the duty cycle at 10% to start the servo at a 2ms period for the 180 degree position
 
             timerA21Init(DC_Servo); //start with the servo closed to start
 
@@ -245,7 +243,7 @@ void main(void)
 
             powerDownFlag = 0;
 
-            openDoor = 1; //tell program door is open
+            openDoor = 0; //tell program door is closed
 
             motorOnflag = 0;
 
