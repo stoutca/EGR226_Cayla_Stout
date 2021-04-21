@@ -85,8 +85,8 @@ void main(void)
     Timer32_Init(); //initialize timer 32
 
     //turn off LEDs, but leave P1.6 on as system starts armed
-    P1->OUT |= BIT7; //turn off green led
-    P1->OUT &= ~BIT6; //turn on red LED
+    P1->OUT &= ~BIT7; //turn off green led
+    P1->OUT |= BIT6; //turn on red LED
 
     //buzzer pin initialization
     P7->SEL0 |= BIT4;
@@ -248,8 +248,8 @@ void main(void)
             motorOnflag = 0;
 
             //turn off LEDs, but leave P1.6 on as system starts armed
-            P1->OUT |= BIT7; //turn on green led
-            P1->OUT &= ~BIT6; //turn off red LED
+            P1->OUT &= ~BIT7; //turn off green led
+            P1->OUT |= BIT6; //turn on red LED
 
             //turn off RGB LED ports
             timerA01Init(0);
