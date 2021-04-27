@@ -1,12 +1,10 @@
 /************************************************************
 Author: Cayla Stout
 Course: EGR 226 - 902
-Date: 3/4/2021
 Project: EGR 226 902
 Description: This .c file contains  the library for all
 functions that use the LCD, from initializing to sending data
-to the LCD pins from the MSP 432 pins. P4.1 is for the RS pin,
-P4.2 for the E pin, and P4.4 - P4.7 for DB4-DB7
+to the LCD pins from the MSP 432 pins.
 *************************************************************/
 
 #include "msp.h" //include msp library

@@ -9,7 +9,7 @@ on or off. The project is based off the game Five Nights at
 Freddy's, so at random times, an alarm will sound, signifying
 that a "monster" is at the door. If the user doesn't close
 the door within 5 seconds, then they lose. If the user survives
-until the 7 segment LED counts to 6, then they win. Either way,
+until 5 attacks happen, then they win. Either way,
 the user can choose to try again and the program will reset.
  *************************************************************/
 
@@ -82,7 +82,7 @@ void main(void)
     keypad_init(); //initialize the keypad
 
     LCD_init(); //initialize the LCD
-    Timer32_Init(); //initialize timer 32
+    Timer32_Init(); //initialize timer 32 instance 2
 
     //turn off LEDs, but leave P1.6 on as system starts armed
     P1->OUT &= ~BIT7; //turn off green led
@@ -539,7 +539,7 @@ void main(void)
                 delay_ms(5); //5 millisecond delay needed to fully set the cursor to the home position
 
                 //move servo to closed position - 180 degrees
-                //change PWM of servo to 2ms - 10% duty cycle
+                //change PWM of servo to 1ms - 5% duty cycle
                 DC_Servo = setDutyCycle(0.05, Period_Servo); //calculate the duty cycle in counts
                 timerA21Init(DC_Servo); //set the duty cycle in the servo PWM
 
@@ -643,7 +643,6 @@ void main(void)
             }
 
             break;
-
 
             //red LED state
         case 'r':
@@ -1089,15 +1088,15 @@ void main(void)
                 printString(gameOver);
                 delay_ms(1000); //delay for 1 second
 
-                //Option 1: Door menu
+                //Ask User if they want to try again
                 commandWrite(0xC0); //line 2
                 printString(tryAgain);
 
-                //Option 2: Motor Menu
+                //Option 1: Play again
                 commandWrite(0x90); //line 3
                 printString(gameOverOpt1);
 
-                //Option 3: Lights Menu
+                //Option 2: Give up
                 commandWrite(0xD0); //line 4
                 printString(gameOverOpt2);
 

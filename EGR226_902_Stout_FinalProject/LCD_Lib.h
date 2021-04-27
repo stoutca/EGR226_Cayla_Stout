@@ -1,12 +1,10 @@
 /************************************************************
 Author: Cayla Stout
 Course: EGR 226 - 902
-Date: 3/3/2021
 Project: Library for LCD Functions
 RGB LEDs on the MSP432
 Description: This .h file contains the function prototypes
-to work the LCD on the MSP432 using P4.1 for the RS pin,
-P4.2 for the E pin, and P4.4 - P4.7 for DB4-DB7
+to work the LCD on the MSP432
 *************************************************************/
 
 #ifndef LCD_LIB_H_

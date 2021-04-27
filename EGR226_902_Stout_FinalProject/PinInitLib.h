@@ -2,7 +2,7 @@
 Author: Cayla Stout
 Course: EGR 226 - 902
 Project: Final Project
-Description: This .c file contains  the library for all LED, motor,
+Description: This .h file contains  the library for all LED, motor,
 pushbutton, and keypad pin initializations
  *************************************************************/
 

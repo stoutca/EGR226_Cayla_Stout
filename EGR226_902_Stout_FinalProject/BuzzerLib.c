@@ -1,3 +1,10 @@
+/************************************************************
+Author: Cayla Stout
+Course: EGR 226 - 902
+Project: Final Project
+Description: This .c file contains function definitions to use
+initialize and use the piezzo buzzer on a timerA pin
+ *************************************************************/
 #include "msp.h"
 #include <stdio.h>
 #include <stdlib.h>

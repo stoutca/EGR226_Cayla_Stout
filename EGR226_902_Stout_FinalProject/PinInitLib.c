@@ -1,4 +1,10 @@
-
+/************************************************************
+Author: Cayla Stout
+Course: EGR 226 - 902
+Project: Final Project
+Description: This .c file contains  the library for all LED, motor,
+pushbutton, and keypad pin initializations
+ *************************************************************/
 #include "msp.h"
 #include <PinInitLib.h>
 
@@ -68,8 +74,8 @@ void motorPinInit()
 }
 
 /****| PushbuttonPinInit | ********************************************
- * Brief: This function initializes the servo and DC motors attached to
- * P5.6 and P5.7
+ * Brief: This function initializes the two pushbuttons attached to
+ * P3.2 and P3.3
  * param:
  * N/A
  * return:

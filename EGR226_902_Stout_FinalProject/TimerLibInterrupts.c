@@ -3,7 +3,7 @@ Author: Cayla Stout
 Course: EGR 226 - 902
 Date: 3/3/2021
 Project: Library for Timer Functions
-Description: This .h file contains the function prototypes
+Description: This .c file contains the function prototypes
 for the SysTick initialization and functions to delay the
 program by millisecond or microsecond increments. Timer A
 initializations and uses with a DC motor are also included here
@@ -25,9 +25,9 @@ initializations and uses with a DC motor are also included here
 void SysTick_Init(void)
 { //initialization of systic timer
     SysTick -> CTRL = 0; // disable SysTick During step
-    SysTick -> LOAD = 0x00FFFFFF; // max reload value for 0.5s uint16_terrupts
+    SysTick -> LOAD = 0x00FFFFFF; // max reload value for 1 millisecond delays
     SysTick -> VAL = 0; // any write to current clears it
-    SysTick -> CTRL = 0x00000005; // enable systic, 3MHz, interrupts
+    SysTick -> CTRL = 0x00000005; // enable systic, 3MHz
 }
 //code from EGR 226 Systick Lecture Slide
 
@@ -59,8 +59,8 @@ void Timer32_Init()
  *************************************************************/
 
 void Timer32_1_Init()
-{ //initialization of systic timer
-    TIMER32_1->CONTROL = 0b11100011; //period mode, with interrupt, no prescaler, 16 bit mode, one shot mode
+{
+    TIMER32_1->CONTROL = 0b11100011; //period mode, with interrupt, no prescaler, 32 bit mode, one shot mode
     TIMER32_1->LOAD = 15015015; //5 second timer on 3 MHz clock
 }
 
@@ -111,10 +111,10 @@ void delay_micro (unsigned microsec)
 
 void timerA0Init(uint16_t T)
 {
-    TIMER_A0->CCR[0] = T - 1; // PWM Period (# cycles of clock) for 100 Hz
+    TIMER_A0->CCR[0] = T - 1; // PWM Period (# cycles of clock)
     TIMER_A0->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
-    TIMER_A0->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
-    TIMER_A0->CCTL[3] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
+    TIMER_A0->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7; // CCR2 reset/set mode 7
+    TIMER_A0->CCTL[3] = TIMER_A_CCTLN_OUTMOD_7; // CCR3 reset/set mode 7
     TIMER_A0->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7; // CCR4 reset/set mode 7
     TIMER_A0->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
 }
@@ -218,7 +218,6 @@ void timerA1Init(uint16_t T)
     TIMER_A1->CCR[0] = T - 1; // PWM Period (# cycles of clock)
     TIMER_A1->CCTL[4] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
     TIMER_A1->CTL = 0x0214; // SMCLK selected, no clock divider, set up mode to count, Clear TAR to start
-
 }
 
 /****| timerA14Init | **********************************************
@@ -239,7 +238,7 @@ void timerA14Init(uint16_t T)
 
 /****| timerA2Init | **********************************************
  * Brief: This function initializes the timer A2 module PWM for
- * use in the Servo
+ * use in the Servo and DC motor
  * param:
  * uint16_teger type variable for the period of a 50 Hz frequency
  * return:
@@ -250,14 +249,14 @@ void timerA2Init(uint16_t T)
 {
     TIMER_A2->CCR[0] = T - 1; // PWM Period (# cycles of clock)
     TIMER_A2->CCTL[1] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
-    TIMER_A2->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7; // CCR1 reset/set mode 7
+    TIMER_A2->CCTL[2] = TIMER_A_CCTLN_OUTMOD_7; // CCR2 reset/set mode 7
     TIMER_A2->CTL = 0x02D4; // SMCLK selected, 1/8 clock divider, set up mode to count, Clear TAR to start
 
 }
 
-/****| timerA23Init | **********************************************
+/****| timerA22Init | **********************************************
  * Brief: This function initializes the timer A module as PWM output for the
- * servo and DC motor
+ * dc motor
  * param:
  * uint16_t type variable for the variable duty cycle
  * return:
@@ -271,7 +270,7 @@ void timerA22Init(uint16_t DC)
 
 /****| timerA21Init | **********************************************
  * Brief: This function initializes the timer A module as PWM output
- * DC modulation
+ * for the servo motor.
  * param:
  * uint16_t type variable for the variable duty cycle
  * return:
